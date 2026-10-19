@@ -1,6 +1,6 @@
 # Requisitos e referências
 
-Levantamento inicial em 18/10/2026. A página é uma SPA: o conteúdo foi recuperado do bundle público `/assets/index-DimFnQZA.js`, na função que monta a documentação, incluindo os critérios, endpoints e a seção de ambiente. Não foi feita execução funcional. Reconferir a página antes de executar; registrar mudanças neste documento.
+Levantamento inicial em 18/10/2026. A página é uma SPA: o conteúdo foi recuperado do bundle público `/assets/index-DimFnQZA.js`, na função que monta a documentação, incluindo os critérios, endpoints e a seção de ambiente. A documentação renderizada foi reconferida em 18/10/2026, antes da execução de CT09, sem mudanças identificadas nos critérios acima. O registro funcional está em `execucao.md`.
 
 Fonte: https://verzel-store.qa-test-verzel-store.workers.dev/documentacao — VZS-142, versão 2.3.0.
 

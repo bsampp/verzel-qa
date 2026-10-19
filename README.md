@@ -2,7 +2,7 @@
 
 Validação da entrega **VZS-142: cupom de desconto e frete grátis**, documentação versão 2.3.0, publicada em 30/09/2026.
 
-**Status: planejamento inicial. Nenhum cenário foi executado e nenhum bug foi confirmado.**
+**Status: CT09 executado na UI e investigação de sete variantes pela API concluída. BUG-001 confirmado no subtotal de R$ 200, com ou sem cupom. Demais cenários/camadas pendentes.**
 
 ## Aplicação e fontes
 
@@ -18,10 +18,10 @@ Validação da entrega **VZS-142: cupom de desconto e frete grátis**, documenta
 | Escopo, estratégia e cronograma | [Plano](docs/plano-de-testes.md) | Inicial |
 | Regras, dados e decisões | [Requisitos](docs/requisitos.md) | Levantados; reconferir na página |
 | Cenários e rastreabilidade | [Cenários](docs/cenarios.md) | Propostos |
-| Execução manual e exploratória | [Execução](docs/execucao.md) | Não iniciada |
-| Bugs reproduzidos | [Bugs](docs/bugs/README.md) | Nenhum confirmado |
-| Documento de evidências | [Evidências](docs/evidencias.md) | A preencher |
-| Automação de pelo menos 3 cenários | `tests/` (a criar na tarefa 05) | Pendente |
+| Execução manual e exploratória | [Execução](docs/execucao.md) | Captura manual recebida; exploração estruturada pendente |
+| Bugs reproduzidos | [Bugs](docs/bugs/README.md) | BUG-001 confirmado |
+| Documento de evidências | [Evidências](docs/evidencias.md) | CT09 coletado |
+| Automação de pelo menos 3 cenários | [Teste CT09](tests/carrinho.spec.ts) | 1 de pelo menos 3 implementado |
 | Tarefas no GitHub | [Backlog](docs/backlog.md) e [corpos das issues](docs/issues/) | 6 issues abertas |
 | Uso de IA | [Registro](docs/uso-de-ia.md) | Inicial |
 
@@ -33,11 +33,27 @@ Validação da entrega **VZS-142: cupom de desconto e frete grátis**, documenta
 4. Implemente pelo menos 3 testes Playwright e documente instalação e comandos reais.
 5. Faça a revisão final e envie o link público no formulário do enunciado.
 
-## Automação: estado atual
+## Automação: primeiro slice
 
-A automação ainda não foi implementada. Este commit contém somente documentação e templates; não há comando de teste disponível.
+Playwright 1.64.1 com TypeScript e Chromium, um worker, sem retries ou mocks. Cada teste recebe um contexto de navegador limpo. Ambiente validado: Node v26.8.1, npm 11.19.0, Linux x86_64. Em outra máquina, usar uma versão de Node suportada pelo Playwright.
 
-Decisão inicial: Playwright com TypeScript, testes independentes e execução conservadora com um worker. Após implementar a tarefa 05, atualizar esta seção com a versão de Node utilizada, instalação via lockfile, instalação do Chromium, comando de execução e abertura do relatório. Falhas reais da aplicação devem continuar visíveis nos testes.
+```bash
+npm ci
+npx playwright install chromium
+npm test
+npm run test:report
+```
+
+Em Linux, se faltarem bibliotecas do sistema, executar `npx playwright install --with-deps chromium`.
+Para acompanhar visualmente em uma máquina com interface gráfica: `npm run test:headed`.
+
+O teste de navegador é CT09. Sua última execução terminou com **1 falha de produto**: frete R$ 19,90 e total R$ 199,90, quando deveriam ser zero e R$ 180,00. O comando retorna código 1 enquanto a divergência existir. Não marcar o teste como skip ou falha esperada para esconder o defeito.
+
+O relatório HTML fica em `playwright-report/`; screenshot, trace e resultado JSON ficam em `test-results/`. Esses diretórios são temporários e ignorados pelo Git. A evidência selecionada foi preservada em [evidencias/CT09](evidencias/CT09). O JSON da chamada real aparece como anexo no relatório.
+
+A [suíte API](tests/frete.api.spec.ts) compara sete variantes de subtotal e cupom. Para executar somente a investigação: `npx playwright test tests/frete.api.spec.ts`. Matriz inicial: **4 passaram e 2 falharam**, ambas no subtotal de R$ 200. Complemento CT20 executado separadamente: **passou**, mantendo frete grátis com subtotal R$ 209,80 e total após desconto R$ 188,82. CT18 e CT19 identificam novas variantes registradas em `docs/cenarios.md`. Ainda há somente um cenário pelo navegador; os outros dois planejados continuam pendentes.
+
+Comece a leitura pelo [teste](tests/carrinho.spec.ts): preparar o carrinho, aplicar o cupom e verificar valores. A [configuração](playwright.config.ts) define ambiente e relatórios. Os valores esperados vêm dos critérios, sem reutilizar o cálculo da API como resultado correto.
 
 ## Trabalhar nas issues
 
