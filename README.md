@@ -2,7 +2,7 @@
 
 Validação da entrega **VZS-142: cupom de desconto e frete grátis**, documentação versão 2.3.0, publicada em 30/09/2026.
 
-**Status: CT09 executado na UI e investigação de sete variantes pela API concluída. BUG-001 confirmado no subtotal de R$ 200, com ou sem cupom. Demais cenários/camadas pendentes.**
+**Status: CT01 e CT03 aprovados na UI, CT09 reprovado e investigação de sete variantes pela API concluída. BUG-001 confirmado no subtotal de R$ 200, com ou sem cupom. Demais cenários/camadas pendentes.**
 
 ## Aplicação e fontes
 
@@ -20,8 +20,8 @@ Validação da entrega **VZS-142: cupom de desconto e frete grátis**, documenta
 | Cenários e rastreabilidade | [Cenários](docs/cenarios.md) | Propostos |
 | Execução manual e exploratória | [Execução](docs/execucao.md) | Captura manual recebida; exploração estruturada pendente |
 | Bugs reproduzidos | [Bugs](docs/bugs/README.md) | BUG-001 confirmado |
-| Documento de evidências | [Evidências](docs/evidencias.md) | CT09 coletado |
-| Automação de pelo menos 3 cenários | [Teste CT09](tests/carrinho.spec.ts) | 1 de pelo menos 3 implementado |
+| Documento de evidências | [Evidências](docs/evidencias.md) | Frete e cupons coletados |
+| Automação de pelo menos 3 cenários | [Teste CT09](tests/carrinho.spec.ts) | 3 cenários UI implementados e executados, mais 7 casos API |
 | Tarefas no GitHub | [Backlog](docs/backlog.md) e [corpos das issues](docs/issues/) | 6 issues abertas |
 | Uso de IA | [Registro](docs/uso-de-ia.md) | Inicial |
 
@@ -47,11 +47,11 @@ npm run test:report
 Em Linux, se faltarem bibliotecas do sistema, executar `npx playwright install --with-deps chromium`.
 Para acompanhar visualmente em uma máquina com interface gráfica: `npm run test:headed`.
 
-O teste de navegador é CT09. Sua última execução terminou com **1 falha de produto**: frete R$ 19,90 e total R$ 199,90, quando deveriam ser zero e R$ 180,00. O comando retorna código 1 enquanto a divergência existir. Não marcar o teste como skip ou falha esperada para esconder o defeito.
+Os testes pelo navegador são CT01, CT03 e CT09. CT01 e CT03 passaram na rodada de cupons. A última execução de CT09 terminou com **1 falha de produto**: frete R$ 19,90 e total R$ 199,90, quando deveriam ser zero e R$ 180,00. O comando retorna código 1 enquanto a divergência existir. Não marcar o teste como skip ou falha esperada para esconder o defeito.
 
 O relatório HTML fica em `playwright-report/`; screenshot, trace e resultado JSON ficam em `test-results/`. Esses diretórios são temporários e ignorados pelo Git. A evidência selecionada foi preservada em [evidencias/CT09](evidencias/CT09). O JSON da chamada real aparece como anexo no relatório.
 
-A [suíte API](tests/frete.api.spec.ts) compara sete variantes de subtotal e cupom. Para executar somente a investigação: `npx playwright test tests/frete.api.spec.ts`. Matriz inicial: **4 passaram e 2 falharam**, ambas no subtotal de R$ 200. Complemento CT20 executado separadamente: **passou**, mantendo frete grátis com subtotal R$ 209,80 e total após desconto R$ 188,82. CT18 e CT19 identificam novas variantes registradas em `docs/cenarios.md`. Ainda há somente um cenário pelo navegador; os outros dois planejados continuam pendentes.
+A [suíte API](tests/frete.api.spec.ts) compara sete variantes de subtotal e cupom. Para executar somente a investigação: `npx playwright test tests/frete.api.spec.ts`. Matriz inicial: **4 passaram e 2 falharam**, ambas no subtotal de R$ 200. Complemento CT20 executado separadamente: **passou**, mantendo frete grátis com subtotal R$ 209,80 e total após desconto R$ 188,82. CT18 e CT19 identificam novas variantes registradas em `docs/cenarios.md`. Os três cenários pelo navegador estão implementados; outras regras e exploração continuam pendentes.
 
 Comece a leitura pelo [teste](tests/carrinho.spec.ts): preparar o carrinho, aplicar o cupom e verificar valores. A [configuração](playwright.config.ts) define ambiente e relatórios. Os valores esperados vêm dos critérios, sem reutilizar o cálculo da API como resultado correto.
 
@@ -76,7 +76,7 @@ A entrega final exige repositório público. Conferir a visibilidade antes do en
 - [ ] Execução manual e exploratória documentada com resultados por cenário.
 - [ ] Todos os bugs encontrados reportados com reprodução e evidência.
 - [ ] Documento de evidências completo e com links funcionando.
-- [ ] Pelo menos 3 cenários Playwright implementados e executados.
+- [x] Pelo menos 3 cenários Playwright implementados e executados.
 - [ ] README com instruções verificadas para rodar a automação.
 - [ ] Repositório público acessível sem login.
 - [ ] Uso de IA descrito no formulário de envio.

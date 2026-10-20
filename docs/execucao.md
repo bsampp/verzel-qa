@@ -61,3 +61,14 @@ EX-008 / CT20; API; 2026-10-18T22:41:38.892Z (UTC), Playwright 1.64.1, Node v26.
 Dados: P005 × 1 (100,00), P008 × 1 (50,00), P006 × 2 (59,80); cupom BEMVINDO10. Esperado e obtido: subtotal 209,80; desconto 20,98; frete 0; total 188,82; freteGratis true; faltante 0; HTTP 200. **Passou**. [Evidência](../evidencias/CT20/EX-008-calculo.json).
 
 Esse caso confirma CA08 para essa combinação: o desconto reduz o valor abaixo de 200 sem perder frete grátis. Isso enfraquece a hipótese de que o frete seja sempre calculado após o desconto; não prova a implementação interna. Considerando a matriz anterior e este complemento: 7 casos API executados, 5 aprovados e 2 reprovados; não houve nova execução dos seis anteriores.
+
+## Slice de cupons — válido e inexistente
+
+Rodada: 2026-10-20T14:58:43.664Z UTC. Chromium 156.0.8078.4, Playwright 1.64.1, Linux; contextos novos por teste. Comando: `npx playwright test tests/cupons.spec.ts`. Responsável: Codex; revisão humana pendente. Dois testes passaram.
+
+| Execução | Cenário | Dados e passos | Esperado e obtido | Estado | Evidências |
+| --- | --- | --- | --- | --- | --- |
+| EX-009 | CT01, UI/E2E | Adicionar uma mochila P005; abrir carrinho; aplicar BEMVINDO10 | Subtotal 100; desconto 10; frete 19,90; total 109.9; faltante 100; HTTP 200. Cupom aplicado. | Passou | [Tela](../evidencias/CT01/EX-009-carrinho.png), [API](../evidencias/CT01/EX-009-calculo.json) |
+| EX-010 | CT03, UI/E2E | Adicionar uma mochila P005; abrir carrinho; aplicar INEXISTENTE | Subtotal 100; desconto 0; frete 19,90; total 119.9; faltante 100; HTTP 200. Mensagem “Cupom inválido.”; sem cupom aplicado. | Passou | [Tela](../evidencias/CT03/EX-010-carrinho.png), [API](../evidencias/CT03/EX-010-calculo.json) |
+
+A resposta da API foi coletada durante o fluxo; não foi executado o envio de pedido com cupom inválido. CT03 permanece parcialmente coberto até verificar HTTP 422 na criação do pedido. Cupons expirados, normalização e remoção continuam pendentes.

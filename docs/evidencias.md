@@ -23,3 +23,8 @@ Requisição, status, resposta e horário UTC preservados por variante:
 - EX-007 / CT19: [JSON](../evidencias/CT19/EX-007-calculo.json).
 
 - EX-008 / CT20: [JSON](../evidencias/CT20/EX-008-calculo.json), coletado em 2026-10-18T22:41:38.892Z UTC. Confirma frete grátis com subtotal 209,80 e total após desconto 188,82.
+
+## Cupons — evidências da execução pelo navegador
+
+- EX-009 / CT01, 2026-10-20T14:58:47.681Z UTC: [tela](../evidencias/CT01/EX-009-carrinho.png) e [requisição/resposta](../evidencias/CT01/EX-009-calculo.json).
+- EX-010 / CT03, 2026-10-20T14:58:48.939Z UTC: [tela](../evidencias/CT03/EX-010-carrinho.png) e [requisição/resposta](../evidencias/CT03/EX-010-calculo.json).

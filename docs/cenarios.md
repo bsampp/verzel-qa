@@ -1,6 +1,6 @@
 # Cenários propostos
 
-CT09 executado na UI: **falhou**. API: CT06/CT18/CT08/CT19/CT20 passaram; CT07/CT09 falharam. Ver EX-001 a EX-008 e BUG-001. Demais cenários/camadas **não executados**. Cada linha com múltiplas variantes exige registro individual por variante na execução. Começar com aba/contexto limpo; montar carrinho na UI ou enviar payload explícito na API; executar a ação e comparar cada valor/mensagem com o esperado.
+UI: CT01 e CT03 **passaram**; CT09 **falhou**. CT03/pedido API ainda pendente. API: CT06/CT18/CT08/CT19/CT20 passaram; CT07/CT09 falharam. Ver EX-001 a EX-010 e BUG-001. Demais cenários/camadas **não executados**. Cada linha com múltiplas variantes exige registro individual por variante na execução. Começar com aba/contexto limpo; montar carrinho na UI ou enviar payload explícito na API; executar a ação e comparar cada valor/mensagem com o esperado.
 
 | ID | Referência | Prioridade | Camada | Dados e ação | Resultado esperado |
 | --- | --- | --- | --- | --- | --- |
