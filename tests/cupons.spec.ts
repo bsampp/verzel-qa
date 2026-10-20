@@ -2,11 +2,14 @@ import { test, expect } from '@playwright/test';
 
 const casos = [
   { id: 'CT01', cupom: 'BEMVINDO10', valido: true, desconto: '- R$ 10,00', total: 'R$ 109,90' },
-  { id: 'CT03', cupom: 'INEXISTENTE', valido: false, desconto: 'R$ 0,00', total: 'R$ 119,90' },
+  { id: 'CT03', cupom: 'INEXISTENTE', valido: false, desconto: 'R$ 0,00', total: 'R$ 119,90', mensagem: 'Cupom inválido.' },
+  { id: 'CT02-minúsculas', cupom: 'bemvindo10', valido: true, desconto: '- R$ 10,00', total: 'R$ 109,90' },
+  { id: 'CT02-espaços', cupom: '  BeMvInDo10  ', valido: true, desconto: '- R$ 10,00', total: 'R$ 109,90' },
+  { id: 'CT04', cupom: 'VERAO2026', valido: false, desconto: 'R$ 0,00', total: 'R$ 119,90', mensagem: 'Cupom expirado.' },
 ];
 
 for (const caso of casos) {
-  test(`${caso.id} — ${caso.valido ? 'aplicar cupom válido' : 'rejeitar cupom inexistente'} com uma mochila`, async ({ page }, testInfo) => {
+  test(`${caso.id} — ${caso.valido ? 'aplicar cupom válido' : caso.cupom === 'VERAO2026' ? 'rejeitar cupom expirado' : 'rejeitar cupom inexistente'} com uma mochila`, async ({ page }, testInfo) => {
     await test.step('Preparar carrinho com uma mochila de R$ 100', async () => {
       await page.goto('/');
       await page.getByRole('article', { name: 'Mochila Urbana 20L' })
@@ -41,7 +44,7 @@ for (const caso of casos) {
         await expect(remover).toBeVisible();
         await expect(page.getByText('Cupom BEMVINDO10 aplicado.', { exact: true })).toBeVisible();
       } else {
-        await expect(page.getByText('Cupom inválido.', { exact: true })).toBeVisible();
+        await expect(page.getByText(caso.mensagem!, { exact: true })).toBeVisible();
         await expect(remover).toHaveCount(0);
       }
       const resumo = page.getByRole('region', { name: 'Resumo do pedido' });
