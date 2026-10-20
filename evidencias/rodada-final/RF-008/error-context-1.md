@@ -23,11 +23,11 @@ Received: 200
 ```ts
   1   | import { test, expect } from '@playwright/test';
   2   | import { registrarResposta } from './support';
-  3   | 
+  3   |
   4   | const cliente = { nome: 'Maria Silva', email: 'maria@example.com', cep: '01310-100' };
   5   | const itens = [{ produtoId: 'P005', quantidade: 1 }];
   6   | const rotas = ['/api/carrinho/calcular', '/api/pedidos'];
-  7   | 
+  7   |
   8   | for (const rota of rotas) {
   9   |   for (const caso of [
   10  |     { id: 'CT01', cupom: 'BEMVINDO10', valido: true },
@@ -52,7 +52,7 @@ Received: 200
   29  |       }
   30  |     });
   31  |   }
-  32  | 
+  32  |
   33  |   for (const quantidade of [5, 6]) {
   34  |     test(`CT12 API quantidade ${quantidade} em ${rota}`, async ({ request }, info) => {
   35  |       const payload = { cliente, itens: [{ produtoId: 'P006', quantidade }] };
@@ -64,7 +64,7 @@ Received: 200
   40  |       else expect(corpo.itens[0].quantidade).toBe(5);
   41  |     });
   42  |   }
-  43  | 
+  43  |
   44  |   const invalidos = [
   45  |     { nome: 'ausentes', itens: undefined, codigo: 'ITENS_OBRIGATORIOS' },
   46  |     { nome: 'vazios', itens: [], codigo: 'ITENS_OBRIGATORIOS' },
@@ -83,7 +83,7 @@ Received: 200
   59  |     });
   60  |   }
   61  | }
-  62  | 
+  62  |
   63  | for (const caso of [
   64  |   { nome: 'nome sem sobrenome', cliente: { ...cliente, nome: 'Maria' }, valido: false, campo: 'nome' },
   65  |   { nome: 'email inválido', cliente: { ...cliente, email: 'invalido' }, valido: false, campo: 'email' },
@@ -103,7 +103,7 @@ Received: 200
   79  |     }
   80  |   });
   81  | }
-  82  | 
+  82  |
   83  | for (const caso of [
   84  |   { nome: 'lista de produtos', metodo: 'GET', url: '/api/produtos', status: 200 },
   85  |   { nome: 'produto existente', metodo: 'GET', url: '/api/produtos/P005', status: 200 },
@@ -123,7 +123,7 @@ Received: 200
   99  |     } else expect(corpo).toMatchObject({ id: 'P005', preco: 100 });
   100 |   });
   101 | }
-  102 | 
+  102 |
   103 | test('CT13 API — valores em centavos', async ({ request }, info) => {
   104 |   const payload = { itens: [{ produtoId: 'P002', quantidade: 1 }, { produtoId: 'P004', quantidade: 2 }], cupom: 'BEMVINDO10' };
   105 |   const resposta = await request.post('/api/carrinho/calcular', { data: payload });
@@ -131,5 +131,5 @@ Received: 200
   107 |   expect(resposta.status()).toBe(200);
   108 |   expect(corpo).toMatchObject({ subtotal: 239.7, desconto: 23.97, frete: 0, total: 215.73 });
   109 | });
-  110 | 
+  110 |
 ```

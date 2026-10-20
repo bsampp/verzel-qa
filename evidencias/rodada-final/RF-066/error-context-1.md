@@ -42,7 +42,7 @@ Received: false
 
 ```ts
   1  | import { test, expect } from '@playwright/test';
-  2  | 
+  2  |
   3  | // Valores esperados definidos pela documentação, independentemente da API.
   4  | const casos = [
   5  |   { id: 'CT06', itens: [{ produtoId: 'P002', quantidade: 1 }, { produtoId: 'P001', quantidade: 1 }], cupom: undefined, subtotal: 199.8, desconto: 0, frete: 19.9, total: 219.7, faltante: 0.2 },
@@ -53,7 +53,7 @@ Received: false
   10 |   { id: 'CT19', itens: [{ produtoId: 'P007', quantidade: 1 }], cupom: 'BEMVINDO10', subtotal: 229.9, desconto: 22.99, frete: 0, total: 206.91, faltante: 0 },
   11 |   { id: 'CT20', itens: [{ produtoId: 'P005', quantidade: 1 }, { produtoId: 'P008', quantidade: 1 }, { produtoId: 'P006', quantidade: 2 }], cupom: 'BEMVINDO10', subtotal: 209.8, desconto: 20.98, frete: 0, total: 188.82, faltante: 0 },
   12 | ];
-  13 | 
+  13 |
   14 | for (const caso of casos) {
   15 |   test(`${caso.id} API — subtotal ${caso.subtotal}, ${caso.cupom ? 'com' : 'sem'} cupom`, async ({ request }, testInfo) => {
   16 |     const payload = {
@@ -62,7 +62,7 @@ Received: false
   19 |     };
   20 |     const resposta = await request.post('/api/carrinho/calcular', { data: payload });
   21 |     const corpo = await resposta.json();
-  22 | 
+  22 |
   23 |     await testInfo.attach('calculo-carrinho', {
   24 |       body: JSON.stringify({
   25 |         coletadoEm: new Date().toISOString(),
@@ -71,7 +71,7 @@ Received: false
   28 |       }, null, 2),
   29 |       contentType: 'application/json',
   30 |     });
-  31 | 
+  31 |
   32 |     expect(resposta.status()).toBe(200);
   33 |     expect.soft(corpo.subtotal, 'subtotal').toBe(caso.subtotal);
   34 |     expect.soft(corpo.desconto, 'desconto').toBe(caso.desconto);
@@ -82,5 +82,5 @@ Received: false
   38 |     expect.soft(corpo.valorFaltanteFreteGratis, 'faltante').toBe(caso.faltante);
   39 |   });
   40 | }
-  41 | 
+  41 |
 ```

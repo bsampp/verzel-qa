@@ -55,7 +55,7 @@ Call log:
 
 ```ts
   1  | import { test, expect } from '@playwright/test';
-  2  | 
+  2  |
   3  | test('CT09 — manter frete grátis com subtotal de R$ 200 e cupom de 10%', async ({ page }, testInfo) => {
   4  |   await test.step('Adicionar duas mochilas ao carrinho', async () => {
   5  |     await page.goto('/');
@@ -65,7 +65,7 @@ Call log:
   9  |     await page.getByRole('link', { name: /Carrinho/ }).click();
   10 |     await expect(page.getByRole('status', { name: 'Quantidade de Mochila Urbana 20L' })).toHaveText('2');
   11 |   });
-  12 | 
+  12 |
   13 |   await test.step('Aplicar BEMVINDO10 e registrar a resposta real da API', async () => {
   14 |     await page.getByLabel('Cupom de desconto', { exact: true }).fill('BEMVINDO10');
   15 |     const calculo = page.waitForResponse(response =>
@@ -90,7 +90,7 @@ Call log:
   34 |     expect(resposta.status()).toBe(200);
   35 |     await expect(page.getByRole('button', { name: 'Remover cupom', exact: true })).toBeVisible();
   36 |   });
-  37 | 
+  37 |
   38 |   await test.step('Conferir os valores definidos por CA01, CA06 e CA08', async () => {
   39 |     const resumo = page.getByRole('region', { name: 'Resumo do pedido' });
   40 |     await expect(resumo.locator('[data-valor="subtotal"]')).toHaveText('R$ 200,00');
@@ -101,5 +101,5 @@ Call log:
      |                                                               ^ Error: expect(locator).toHaveText(expected) failed
   45 |   });
   46 | });
-  47 | 
+  47 |
 ```

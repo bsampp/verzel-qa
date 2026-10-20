@@ -64,7 +64,7 @@ Call log:
   32  |   await expect(page.locator('[data-valor="desconto"]')).toHaveText('- R$ 10,00');
   33  |   await expect(page.locator('[data-valor="total"]')).toHaveText('R$ 109,90');
   34  | });
-  35  | 
+  35  |
   36  | test('CT10 — recalcular ao passar de uma para duas mochilas e voltar', async ({ page }, info) => {
   37  |   await page.goto('/');
   38  |   await adicionar(page, 'Mochila Urbana 20L');
@@ -83,7 +83,7 @@ Call log:
   51  |   await expect(page.locator('[data-valor="frete"]')).toHaveText('R$ 19,90');
   52  |   await expect(page.locator('[data-valor="total"]')).toHaveText('R$ 109,90');
   53  | });
-  54  | 
+  54  |
   55  | test('CT11 — limitar quantidade no catálogo e carrinho e permitir voltar a cinco', async ({ page }, info) => {
   56  |   await page.goto('/');
   57  |   await adicionar(page, 'Kit 3 Pares de Meias', 5);
@@ -102,7 +102,7 @@ Call log:
   70  |   await aumentar.click();
   71  |   await expect(quantidade).toHaveText('5');
   72  | });
-  73  | 
+  73  |
   74  | test('CT13 — apresentar desconto e total com centavos corretos', async ({ page }) => {
   75  |   await page.goto('/');
   76  |   await adicionar(page, 'Calça Jeans Slim');
@@ -114,7 +114,7 @@ Call log:
   82  |   await expect(page.locator('[data-valor="frete"]')).toHaveText(/^(Grátis|R\$\s0,00)$/i);
   83  |   await expect(page.locator('[data-valor="total"]')).toHaveText('R$ 215,73');
   84  | });
-  85  | 
+  85  |
   86  | for (const caso of [
   87  |   { id: 'CT06', produtos: [['Calça Jeans Slim', 1], ['Camiseta Essencial', 1]] as const, subtotal: 'R$ 199,80', frete: 'R$ 19,90', total: 'R$ 219,70', faltante: 'Faltam R$ 0,20 para o frete grátis.' },
   88  |   { id: 'CT07', produtos: [['Mochila Urbana 20L', 2]] as const, subtotal: 'R$ 200,00', frete: /^(Grátis|R\$\s0,00)$/i, total: 'R$ 200,00' },
@@ -130,7 +130,7 @@ Call log:
   98  |     if (caso.faltante) await expect(page.getByText(caso.faltante, { exact: true })).toBeVisible();
   99  |   });
   100 | }
-  101 | 
+  101 |
   102 | for (const quantidade of [1, 2]) {
   103 |   test(`CT14 — confirmar pedido de ${quantidade} mochila(s) com cupom`, async ({ page }, info) => {
   104 |     await page.goto('/');
@@ -154,7 +154,7 @@ Call log:
       |                                                             ^ Error: expect(locator).toHaveText(expected) failed
   122 |   });
   123 | }
-  124 | 
+  124 |
   125 | for (const caso of [
   126 |   { nome: 'nome sem sobrenome', cliente: { nome: 'Maria', email: 'maria@example.com', cep: '01310-100' }, campo: 'Nome completo' },
   127 |   { nome: 'email inválido', cliente: { nome: 'Maria Silva', email: 'invalido', cep: '01310-100' }, campo: 'E-mail' },
@@ -173,5 +173,5 @@ Call log:
   140 |     await expect(page).toHaveURL(/\/checkout$/);
   141 |   });
   142 | }
-  143 | 
+  143 |
 ```
