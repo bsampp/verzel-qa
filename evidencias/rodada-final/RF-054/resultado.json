@@ -1,0 +1,22 @@
+{
+  "id": "RF-054",
+  "cenario": "CT13",
+  "titulo": "CT13 — apresentar desconto e total com centavos corretos",
+  "arquivo": "fluxos.spec.ts",
+  "linha": 74,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:13:57.694Z",
+  "duracaoMs": 1516,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "tela",
+      "arquivo": "RF-054/tela-0.png"
+    },
+    {
+      "nome": "conteudo",
+      "arquivo": "RF-054/conteudo-1.json"
+    }
+  ]
+}

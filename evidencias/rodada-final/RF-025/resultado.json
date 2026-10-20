@@ -1,0 +1,18 @@
+{
+  "id": "RF-025",
+  "cenario": "CT15",
+  "titulo": "CT15 API ausentes em /api/pedidos",
+  "arquivo": "contratos.api.spec.ts",
+  "linha": 53,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:13:29.642Z",
+  "duracaoMs": 164,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "resposta-api",
+      "arquivo": "RF-025/resposta-api-0.json"
+    }
+  ]
+}

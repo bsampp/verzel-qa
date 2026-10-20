@@ -1,0 +1,111 @@
+[
+  {
+    "acao": "EXP02: checkout após esvaziar carrinho e retornar ao catálogo",
+    "horario": "2026-10-20T16:13:09.380Z"
+  },
+  {
+    "acao": "Adicionar mochila e abrir checkout",
+    "horario": "2026-10-20T16:13:36.189Z",
+    "snapshot": {
+      "command": "snapshot",
+      "browserId": "da9ae0e7-5f4b-4339-bf0a-4c58d8d54c45",
+      "workspaceId": "wks_9c9ce8494a43e657",
+      "url": "https://verzel-store.qa-test-verzel-store.workers.dev/checkout",
+      "title": "Finalizar compra | Verzel Store",
+      "format": "aria-yaml",
+      "snapshot": "- document \"Finalizar compra | Verzel Store\"\n  - note\n    - text: \"Ambiente de teste técnico do processo seletivo de QA da Verzel.\"\n    - link \"Leia a documentação antes de começar.\" [ref=@e1]\n      - text: \"Leia a documentação antes de começar.\"\n  - banner\n    - link \"Verzel Store, página inicial\" [ref=@e2]\n      - text: \"verzel\"\n      - text: \"store\"\n    - navigation \"Principal\"\n      - link \"Produtos\" [ref=@e3]\n        - text: \"Produtos\"\n      - link \"Documentação\" [ref=@e4]\n        - text: \"Documentação\"\n      - link \"Carrinho1\" [ref=@e5]\n        - text: \"Carrinho\"\n        - text: \"1\"\n  - main\n    - heading \"Finalizar compra\" [level=1]\n      - text: \"Finalizar compra\"\n    - link \"Voltar ao carrinho\" [ref=@e6]\n      - text: \"Voltar ao carrinho\"\n    - heading \"Dados para entrega\" [level=2]\n      - text: \"Dados para entrega\"\n    - text: \"Nome completo\"\n    - textbox \"Nome completo\" [ref=@e7]\n    - text: \"E-mail\"\n    - textbox \"E-mail\" [ref=@e8]\n    - text: \"CEP\"\n    - textbox \"CEP\" [ref=@e9]\n    - text: \"Somente números ou no formato 00000-000.\"\n    - text: \"O pagamento é feito na entrega.\"\n    - button \"Confirmar pedido\" [ref=@e10]\n      - text: \"Confirmar pedido\"\n    - heading \"Resumo do pedido\" [level=2]\n      - text: \"Resumo do pedido\"\n    - text: \"Subtotal\"\n    - text: \"R$ 100,00\"\n    - text: \"Desconto\"\n    - text: \"R$ 0,00\"\n    - text: \"Frete\"\n    - text: \"R$ 19,90\"\n    - text: \"Total\"\n    - text: \"R$ 119,90\"\n    - list\n      - listitem\n        - text: \"1\"\n        - text: \"x\"\n        - text: \"Mochila Urbana 20L\"\n        - text: \"R$ 100,00\"\n  - contentinfo\n    - text: \"Verzel Store é um ambiente fictício criado para o teste técnico do processo seletivo de QA da Verzel. Nenhuma compra é real.\"",
+      "truncated": false,
+      "stats": {
+        "nodeCount": 93,
+        "refCount": 10,
+        "textLength": 1727,
+        "iframeCount": 0,
+        "maxDepth": 10
+      }
+    }
+  },
+  {
+    "acao": "Tentar confirmar formulário vazio; observar campos e mensagens",
+    "horario": "2026-10-20T16:13:45.778Z",
+    "snapshot": {
+      "command": "snapshot",
+      "browserId": "da9ae0e7-5f4b-4339-bf0a-4c58d8d54c45",
+      "workspaceId": "wks_9c9ce8494a43e657",
+      "url": "https://verzel-store.qa-test-verzel-store.workers.dev/checkout",
+      "title": "Finalizar compra | Verzel Store",
+      "format": "aria-yaml",
+      "snapshot": "- document \"Finalizar compra | Verzel Store\"\n  - note\n    - text: \"Ambiente de teste técnico do processo seletivo de QA da Verzel.\"\n    - link \"Leia a documentação antes de começar.\" [ref=@e1]\n      - text: \"Leia a documentação antes de começar.\"\n  - banner\n    - link \"Verzel Store, página inicial\" [ref=@e2]\n      - text: \"verzel\"\n      - text: \"store\"\n    - navigation \"Principal\"\n      - link \"Produtos\" [ref=@e3]\n        - text: \"Produtos\"\n      - link \"Documentação\" [ref=@e4]\n        - text: \"Documentação\"\n      - link \"Carrinho1\" [ref=@e5]\n        - text: \"Carrinho\"\n        - text: \"1\"\n  - main\n    - heading \"Finalizar compra\" [level=1]\n      - text: \"Finalizar compra\"\n    - link \"Voltar ao carrinho\" [ref=@e6]\n      - text: \"Voltar ao carrinho\"\n    - heading \"Dados para entrega\" [level=2]\n      - text: \"Dados para entrega\"\n    - text: \"Nome completo\"\n    - textbox \"Nome completo\" [ref=@e7]\n    - text: \"Informe o nome completo.\"\n    - text: \"E-mail\"\n    - textbox \"E-mail\" [ref=@e8]\n    - text: \"Informe o e-mail.\"\n    - text: \"CEP\"\n    - textbox \"CEP\" [ref=@e9]\n    - text: \"Somente números ou no formato 00000-000.\"\n    - text: \"Informe o CEP.\"\n    - text: \"O pagamento é feito na entrega.\"\n    - button \"Confirmar pedido\" [ref=@e10]\n      - text: \"Confirmar pedido\"\n    - heading \"Resumo do pedido\" [level=2]\n      - text: \"Resumo do pedido\"\n    - text: \"Subtotal\"\n    - text: \"R$ 100,00\"\n    - text: \"Desconto\"\n    - text: \"R$ 0,00\"\n    - text: \"Frete\"\n    - text: \"R$ 19,90\"\n    - text: \"Total\"\n    - text: \"R$ 119,90\"\n    - list\n      - listitem\n        - text: \"1\"\n        - text: \"x\"\n        - text: \"Mochila Urbana 20L\"\n        - text: \"R$ 100,00\"\n  - contentinfo\n    - text: \"Verzel Store é um ambiente fictício criado para o teste técnico do processo seletivo de QA da Verzel. Nenhuma compra é real.\"",
+      "truncated": false,
+      "stats": {
+        "nodeCount": 99,
+        "refCount": 10,
+        "textLength": 1827,
+        "iframeCount": 0,
+        "maxDepth": 10
+      }
+    }
+  },
+  {
+    "acao": "Nome sem sobrenome com email/CEP válidos; observar bloqueio",
+    "horario": "2026-10-20T16:14:03.738Z",
+    "snapshot": {
+      "command": "snapshot",
+      "browserId": "da9ae0e7-5f4b-4339-bf0a-4c58d8d54c45",
+      "workspaceId": "wks_9c9ce8494a43e657",
+      "url": "https://verzel-store.qa-test-verzel-store.workers.dev/checkout",
+      "title": "Finalizar compra | Verzel Store",
+      "format": "aria-yaml",
+      "snapshot": "- document \"Finalizar compra | Verzel Store\"\n  - note\n    - text: \"Ambiente de teste técnico do processo seletivo de QA da Verzel.\"\n    - link \"Leia a documentação antes de começar.\" [ref=@e1]\n      - text: \"Leia a documentação antes de começar.\"\n  - banner\n    - link \"Verzel Store, página inicial\" [ref=@e2]\n      - text: \"verzel\"\n      - text: \"store\"\n    - navigation \"Principal\"\n      - link \"Produtos\" [ref=@e3]\n        - text: \"Produtos\"\n      - link \"Documentação\" [ref=@e4]\n        - text: \"Documentação\"\n      - link \"Carrinho1\" [ref=@e5]\n        - text: \"Carrinho\"\n        - text: \"1\"\n  - main\n    - heading \"Finalizar compra\" [level=1]\n      - text: \"Finalizar compra\"\n    - link \"Voltar ao carrinho\" [ref=@e6]\n      - text: \"Voltar ao carrinho\"\n    - heading \"Dados para entrega\" [level=2]\n      - text: \"Dados para entrega\"\n    - text: \"Nome completo\"\n    - textbox \"Nome completo\" [ref=@e7]\n    - text: \"Informe nome e sobrenome.\"\n    - text: \"E-mail\"\n    - textbox \"E-mail\" [ref=@e8]\n    - text: \"CEP\"\n    - textbox \"CEP\" [ref=@e9]\n    - text: \"Somente números ou no formato 00000-000.\"\n    - text: \"O pagamento é feito na entrega.\"\n    - button \"Confirmar pedido\" [ref=@e10]\n      - text: \"Confirmar pedido\"\n    - heading \"Resumo do pedido\" [level=2]\n      - text: \"Resumo do pedido\"\n    - text: \"Subtotal\"\n    - text: \"R$ 100,00\"\n    - text: \"Desconto\"\n    - text: \"R$ 0,00\"\n    - text: \"Frete\"\n    - text: \"R$ 19,90\"\n    - text: \"Total\"\n    - text: \"R$ 119,90\"\n    - list\n      - listitem\n        - text: \"1\"\n        - text: \"x\"\n        - text: \"Mochila Urbana 20L\"\n        - text: \"R$ 100,00\"\n  - contentinfo\n    - text: \"Verzel Store é um ambiente fictício criado para o teste técnico do processo seletivo de QA da Verzel. Nenhuma compra é real.\"",
+      "truncated": false,
+      "stats": {
+        "nodeCount": 95,
+        "refCount": 10,
+        "textLength": 1767,
+        "iframeCount": 0,
+        "maxDepth": 10
+      }
+    }
+  },
+  {
+    "acao": "Corrigir nome para Maria Silva e confirmar com CEP sem hífen",
+    "horario": "2026-10-20T16:14:22.535Z",
+    "snapshot": {
+      "command": "snapshot",
+      "browserId": "da9ae0e7-5f4b-4339-bf0a-4c58d8d54c45",
+      "workspaceId": "wks_9c9ce8494a43e657",
+      "url": "https://verzel-store.qa-test-verzel-store.workers.dev/pedido-confirmado",
+      "title": "Pedido confirmado | Verzel Store",
+      "format": "aria-yaml",
+      "snapshot": "- document \"Pedido confirmado | Verzel Store\"\n  - note\n    - text: \"Ambiente de teste técnico do processo seletivo de QA da Verzel.\"\n    - link \"Leia a documentação antes de começar.\" [ref=@e1]\n      - text: \"Leia a documentação antes de começar.\"\n  - banner\n    - link \"Verzel Store, página inicial\" [ref=@e2]\n      - text: \"verzel\"\n      - text: \"store\"\n    - navigation \"Principal\"\n      - link \"Produtos\" [ref=@e3]\n        - text: \"Produtos\"\n      - link \"Documentação\" [ref=@e4]\n        - text: \"Documentação\"\n      - link \"Carrinho0\" [ref=@e5]\n        - text: \"Carrinho\"\n        - text: \"0\"\n  - main\n    - text: \"Pedido confirmado\"\n    - heading \"Pedido VZ-923461\" [level=1]\n      - text: \"Pedido\"\n      - text: \"VZ-923461\"\n    - text: \"Obrigado,\"\n    - text: \"Maria\"\n    - text: \". Seu pedido foi registrado e o pagamento será feito na entrega.\"\n    - heading \"Itens do pedido\" [level=2]\n      - text: \"Itens do pedido\"\n    - text: \"Subtotal\"\n    - text: \"R$ 100,00\"\n    - text: \"Desconto\"\n    - text: \"R$ 0,00\"\n    - text: \"Frete\"\n    - text: \"R$ 19,90\"\n    - text: \"Total\"\n    - text: \"R$ 119,90\"\n    - list\n      - listitem\n        - text: \"1\"\n        - text: \"x\"\n        - text: \"Mochila Urbana 20L\"\n        - text: \"R$ 100,00\"\n    - link \"Continuar comprando\" [ref=@e6]\n      - text: \"Continuar comprando\"\n  - contentinfo\n    - text: \"Verzel Store é um ambiente fictício criado para o teste técnico do processo seletivo de QA da Verzel. Nenhuma compra é real.\"",
+      "truncated": false,
+      "stats": {
+        "nodeCount": 78,
+        "refCount": 6,
+        "textLength": 1472,
+        "iframeCount": 0,
+        "maxDepth": 9
+      }
+    }
+  },
+  {
+    "acao": "Voltar ao carrinho após confirmar; verificar limpeza",
+    "horario": "2026-10-20T16:14:38.811Z",
+    "snapshot": {
+      "command": "snapshot",
+      "browserId": "da9ae0e7-5f4b-4339-bf0a-4c58d8d54c45",
+      "workspaceId": "wks_9c9ce8494a43e657",
+      "url": "https://verzel-store.qa-test-verzel-store.workers.dev/carrinho",
+      "title": "Carrinho | Verzel Store",
+      "format": "aria-yaml",
+      "snapshot": "- document \"Carrinho | Verzel Store\"\n  - note\n    - text: \"Ambiente de teste técnico do processo seletivo de QA da Verzel.\"\n    - link \"Leia a documentação antes de começar.\" [ref=@e1]\n      - text: \"Leia a documentação antes de começar.\"\n  - banner\n    - link \"Verzel Store, página inicial\" [ref=@e2]\n      - text: \"verzel\"\n      - text: \"store\"\n    - navigation \"Principal\"\n      - link \"Produtos\" [ref=@e3]\n        - text: \"Produtos\"\n      - link \"Documentação\" [ref=@e4]\n        - text: \"Documentação\"\n      - link \"Carrinho0\" [ref=@e5]\n        - text: \"Carrinho\"\n        - text: \"0\"\n  - main\n    - heading \"Seu carrinho está vazio\" [level=1]\n      - text: \"Seu carrinho está vazio\"\n    - text: \"Escolha um produto na vitrine para começar.\"\n    - link \"Ver produtos\" [ref=@e6]\n      - text: \"Ver produtos\"\n  - contentinfo\n    - text: \"Verzel Store é um ambiente fictício criado para o teste técnico do processo seletivo de QA da Verzel. Nenhuma compra é real.\"",
+      "truncated": false,
+      "stats": {
+        "nodeCount": 39,
+        "refCount": 6,
+        "textLength": 964,
+        "iframeCount": 0,
+        "maxDepth": 7
+      }
+    }
+  }
+]

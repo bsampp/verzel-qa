@@ -1,5 +1,9 @@
 # Registro de execução
 
+**Estado final: 69 testes automatizados executados em uma rodada completa, 61 passaram e 8 falharam por dois defeitos confirmados.** A fonte consolidada por variante é [rodada-final.md](rodada-final.md). A execução manual/dirigida e duas sessões curtas de exploração estão em [exploracao.md](exploracao.md). Os registros abaixo preservam o histórico incremental e suas limitações da época; a rodada final supera as pendências antigas.
+
+Recomendação: não aprovar VZS-142 enquanto BUG-001 e BUG-002 permanecerem abertos. A entrega de QA está documentada; publicar o repositório e confirmar prazo/envio são passos administrativos separados.
+
 CT09 executado na UI e reprovado. Investigação API: CT06, CT18, CT07, CT09, CT08 e CT19 executados; quatro aprovações e duas reprovações. Demais cenários/camadas pendentes. A captura manual enviada pela pessoa candidata motivou a reprodução; não foi contada como uma sessão exploratória completa.
 
 ## Contexto de cada rodada

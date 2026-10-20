@@ -1,0 +1,38 @@
+{
+  "coletadoEm": "2026-10-20T16:13:39.079Z",
+  "navegador": "156.0.8078.4",
+  "metodo": "POST",
+  "url": "https://verzel-store.qa-test-verzel-store.workers.dev/api/carrinho/calcular",
+  "requisicao": {
+    "itens": [
+      {
+        "produtoId": "P005",
+        "quantidade": 1
+      }
+    ],
+    "cupom": "VERAO2026"
+  },
+  "status": 200,
+  "resposta": {
+    "itens": [
+      {
+        "produtoId": "P005",
+        "nome": "Mochila Urbana 20L",
+        "precoUnitario": 100,
+        "quantidade": 1,
+        "total": 100
+      }
+    ],
+    "subtotal": 100,
+    "desconto": 0,
+    "frete": 19.9,
+    "freteGratis": false,
+    "valorFaltanteFreteGratis": 100,
+    "total": 119.9,
+    "cupom": {
+      "codigo": "VERAO2026",
+      "aplicado": false,
+      "mensagem": "Cupom expirado."
+    }
+  }
+}

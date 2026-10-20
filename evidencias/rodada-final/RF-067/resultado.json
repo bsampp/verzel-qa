@@ -1,0 +1,18 @@
+{
+  "id": "RF-067",
+  "cenario": "CT08",
+  "titulo": "CT08 API — subtotal 229.9, sem cupom",
+  "arquivo": "frete.api.spec.ts",
+  "linha": 15,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:14:32.327Z",
+  "duracaoMs": 160,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "calculo-carrinho",
+      "arquivo": "RF-067/calculo-carrinho-0.json"
+    }
+  ]
+}

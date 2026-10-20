@@ -1,0 +1,22 @@
+{
+  "id": "RF-048",
+  "cenario": "CT02",
+  "titulo": "CT02-minúsculas — aplicar cupom válido com uma mochila",
+  "arquivo": "cupons.spec.ts",
+  "linha": 12,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:13:35.382Z",
+  "duracaoMs": 1243,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "calculo-carrinho",
+      "arquivo": "RF-048/calculo-carrinho-0.json"
+    },
+    {
+      "nome": "carrinho",
+      "arquivo": "RF-048/carrinho-1.png"
+    }
+  ]
+}

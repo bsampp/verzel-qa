@@ -1,0 +1,22 @@
+{
+  "id": "RF-049",
+  "cenario": "CT02",
+  "titulo": "CT02-espaços — aplicar cupom válido com uma mochila",
+  "arquivo": "cupons.spec.ts",
+  "linha": 12,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:13:36.644Z",
+  "duracaoMs": 1455,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "calculo-carrinho",
+      "arquivo": "RF-049/calculo-carrinho-0.json"
+    },
+    {
+      "nome": "carrinho",
+      "arquivo": "RF-049/carrinho-1.png"
+    }
+  ]
+}

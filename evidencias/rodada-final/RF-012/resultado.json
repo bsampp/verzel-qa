@@ -1,0 +1,18 @@
+{
+  "id": "RF-012",
+  "cenario": "CT15",
+  "titulo": "CT15 API produto desconhecido em /api/carrinho/calcular",
+  "arquivo": "contratos.api.spec.ts",
+  "linha": 53,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:13:27.011Z",
+  "duracaoMs": 118,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "resposta-api",
+      "arquivo": "RF-012/resposta-api-0.json"
+    }
+  ]
+}

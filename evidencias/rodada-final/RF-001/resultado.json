@@ -1,0 +1,29 @@
+{
+  "id": "RF-001",
+  "cenario": "CT09",
+  "titulo": "CT09 — manter frete grátis com subtotal de R$ 200 e cupom de 10%",
+  "arquivo": "carrinho.spec.ts",
+  "linha": 3,
+  "estado": "failed",
+  "inicio": "2026-10-20T16:13:11.768Z",
+  "duracaoMs": 11522,
+  "bug": "BUG-001",
+  "erros": [
+    "Error: expect(locator).toHaveText(expected) failed\n\nLocator: getByRole('region', { name: 'Resumo do pedido' }).locator('[data-valor=\"frete\"]')\nExpected pattern: /^(Grátis|R\\$\\s0,00)$/i\nReceived string:  \"R$ 19,90\"\nTimeout: 5000ms\n\nCall log:\n  - Expect \"soft toHaveText\" getByRole('region', { name: 'Resumo do pedido' }).locator('[data-valor=\"frete\"]') with timeout 5000ms\n  - waiting for getByRole('region', { name: 'Resumo do pedido' }).locator('[data-valor=\"frete\"]')\n    14 × locator resolved to <dd data-valor=\"frete\">R$ 19,90</dd>\n       - unexpected value \"R$ 19,90\"\n\n\n  41 |     await expect(resumo.locator('[data-valor=\"desconto\"]')).toHaveText('- R$ 20,00');\n  42 |     // Soft permite relatar frete e total incorretos na mesma execução.\n> 43 |     await expect.soft(resumo.locator('[data-valor=\"frete\"]')).toHaveText(/^(Grátis|R\\$\\s0,00)$/i);\n     |                                                               ^\n  44 |     await expect.soft(resumo.locator('[data-valor=\"total\"]')).toHaveText('R$ 180,00');\n  45 |   });\n  46 | });\n    at /home/bsampp/projects/verzel-qa/tests/carrinho.spec.ts:43:63\n    at /home/bsampp/projects/verzel-qa/tests/carrinho.spec.ts:38:3",
+    "Error: expect(locator).toHaveText(expected) failed\n\nLocator:  getByRole('region', { name: 'Resumo do pedido' }).locator('[data-valor=\"total\"]')\nExpected: \"R$ 180,00\"\nReceived: \"R$ 199,90\"\nTimeout:  5000ms\n\nCall log:\n  - Expect \"soft toHaveText\" getByRole('region', { name: 'Resumo do pedido' }).locator('[data-valor=\"total\"]') with timeout 5000ms\n  - waiting for getByRole('region', { name: 'Resumo do pedido' }).locator('[data-valor=\"total\"]')\n    14 × locator resolved to <dd data-valor=\"total\">R$ 199,90</dd>\n       - unexpected value \"R$ 199,90\"\n\n\n  42 |     // Soft permite relatar frete e total incorretos na mesma execução.\n  43 |     await expect.soft(resumo.locator('[data-valor=\"frete\"]')).toHaveText(/^(Grátis|R\\$\\s0,00)$/i);\n> 44 |     await expect.soft(resumo.locator('[data-valor=\"total\"]')).toHaveText('R$ 180,00');\n     |                                                               ^\n  45 |   });\n  46 | });\n  47 |\n    at /home/bsampp/projects/verzel-qa/tests/carrinho.spec.ts:44:63\n    at /home/bsampp/projects/verzel-qa/tests/carrinho.spec.ts:38:3"
+  ],
+  "evidencias": [
+    {
+      "nome": "calculo-carrinho",
+      "arquivo": "RF-001/calculo-carrinho-0.json"
+    },
+    {
+      "nome": "screenshot",
+      "arquivo": "RF-001/screenshot-1.png"
+    },
+    {
+      "nome": "error-context",
+      "arquivo": "RF-001/error-context-2.md"
+    }
+  ]
+}

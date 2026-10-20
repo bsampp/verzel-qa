@@ -1,0 +1,22 @@
+{
+  "id": "RF-047",
+  "cenario": "CT03",
+  "titulo": "CT03 — rejeitar cupom inexistente com uma mochila",
+  "arquivo": "cupons.spec.ts",
+  "linha": 12,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:13:34.130Z",
+  "duracaoMs": 1234,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "calculo-carrinho",
+      "arquivo": "RF-047/calculo-carrinho-0.json"
+    },
+    {
+      "nome": "carrinho",
+      "arquivo": "RF-047/carrinho-1.png"
+    }
+  ]
+}

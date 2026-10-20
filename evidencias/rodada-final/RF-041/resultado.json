@@ -1,0 +1,18 @@
+{
+  "id": "RF-041",
+  "cenario": "CT17",
+  "titulo": "CT17 API produto inexistente",
+  "arquivo": "contratos.api.spec.ts",
+  "linha": 91,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:13:32.069Z",
+  "duracaoMs": 76,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "resposta-api",
+      "arquivo": "RF-041/resposta-api-0.json"
+    }
+  ]
+}

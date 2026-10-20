@@ -1,0 +1,18 @@
+{
+  "id": "RF-030",
+  "cenario": "CT15",
+  "titulo": "CT15 API quantidade 0 em /api/pedidos",
+  "arquivo": "contratos.api.spec.ts",
+  "linha": 53,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:13:30.387Z",
+  "duracaoMs": 202,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "resposta-api",
+      "arquivo": "RF-030/resposta-api-0.json"
+    }
+  ]
+}

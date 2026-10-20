@@ -1,0 +1,18 @@
+{
+  "id": "RF-028",
+  "cenario": "CT15",
+  "titulo": "CT15 API produto desconhecido em /api/pedidos",
+  "arquivo": "contratos.api.spec.ts",
+  "linha": 53,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:13:30.145Z",
+  "duracaoMs": 90,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "resposta-api",
+      "arquivo": "RF-028/resposta-api-0.json"
+    }
+  ]
+}

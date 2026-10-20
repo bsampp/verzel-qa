@@ -1,0 +1,18 @@
+{
+  "id": "RF-027",
+  "cenario": "CT15",
+  "titulo": "CT15 API item não objeto em /api/pedidos",
+  "arquivo": "contratos.api.spec.ts",
+  "linha": 53,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:13:30.023Z",
+  "duracaoMs": 105,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "resposta-api",
+      "arquivo": "RF-027/resposta-api-0.json"
+    }
+  ]
+}

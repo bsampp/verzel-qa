@@ -1,0 +1,22 @@
+{
+  "id": "RF-061",
+  "cenario": "CT16",
+  "titulo": "CT16 UI — email inválido",
+  "arquivo": "fluxos.spec.ts",
+  "linha": 130,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:14:26.880Z",
+  "duracaoMs": 1201,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "tela",
+      "arquivo": "RF-061/tela-0.png"
+    },
+    {
+      "nome": "conteudo",
+      "arquivo": "RF-061/conteudo-1.json"
+    }
+  ]
+}

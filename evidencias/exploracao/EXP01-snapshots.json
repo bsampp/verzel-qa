@@ -1,0 +1,111 @@
+[
+  {
+    "acao": "EXP01: abrir loja e adicionar uma mochila pelo catálogo",
+    "horario": "2026-10-20T16:11:52.383Z"
+  },
+  {
+    "acao": "Carrinho com uma mochila, sem cupom",
+    "horario": "2026-10-20T16:11:56.522Z",
+    "snapshot": {
+      "command": "snapshot",
+      "browserId": "da9ae0e7-5f4b-4339-bf0a-4c58d8d54c45",
+      "workspaceId": "wks_9c9ce8494a43e657",
+      "url": "https://verzel-store.qa-test-verzel-store.workers.dev/carrinho",
+      "title": "Carrinho | Verzel Store",
+      "format": "aria-yaml",
+      "snapshot": "- document \"Carrinho | Verzel Store\"\n  - note\n    - text: \"Ambiente de teste técnico do processo seletivo de QA da Verzel.\"\n    - link \"Leia a documentação antes de começar.\" [ref=@e1]\n      - text: \"Leia a documentação antes de começar.\"\n  - banner\n    - link \"Verzel Store, página inicial\" [ref=@e2]\n      - text: \"verzel\"\n      - text: \"store\"\n    - navigation \"Principal\"\n      - link \"Produtos\" [ref=@e3]\n        - text: \"Produtos\"\n      - link \"Documentação\" [ref=@e4]\n        - text: \"Documentação\"\n      - link \"Carrinho1\" [ref=@e5]\n        - text: \"Carrinho\"\n        - text: \"1\"\n  - main\n    - heading \"Carrinho\" [level=1]\n      - text: \"Carrinho\"\n    - button \"Esvaziar carrinho\" [ref=@e6]\n      - text: \"Esvaziar carrinho\"\n    - list\n      - listitem\n        - heading \"Mochila Urbana 20L\" [level=3]\n          - text: \"Mochila Urbana 20L\"\n        - text: \"R$ 100,00\"\n        - text: \"cada\"\n        - group \"Quantidade de Mochila Urbana 20L\"\n          - button \"Diminuir quantidade de Mochila Urbana 20L\"\n            - text: \"-\"\n          - text: \"1\"\n          - button \"Aumentar quantidade de Mochila Urbana 20L\" [ref=@e7]\n            - text: \"+\"\n        - text: \"R$ 100,00\"\n        - button \"Remover Mochila Urbana 20L do carrinho\" [ref=@e8]\n          - text: \"Remover\"\n    - text: \"Cupom de desconto\"\n    - textbox \"Cupom de desconto\" [ref=@e9]\n    - button \"Aplicar cupom\" [ref=@e10]\n      - text: \"Aplicar cupom\"\n    - heading \"Resumo do pedido\" [level=2]\n      - text: \"Resumo do pedido\"\n    - text: \"Subtotal\"\n    - text: \"R$ 100,00\"\n    - text: \"Desconto\"\n    - text: \"R$ 0,00\"\n    - text: \"Frete\"\n    - text: \"R$ 19,90\"\n    - text: \"Total\"\n    - text: \"R$ 119,90\"\n    - text: \"Faltam\"\n    - text: \"R$ 100,00\"\n    - text: \"para o frete grátis.\"\n    - link \"Finalizar compra\" [ref=@e11]\n      - text: \"Finalizar compra\"\n  - contentinfo\n    - text: \"Verzel Store é um ambiente fictício criado para o teste técnico do processo seletivo de QA da Verzel. Nenhuma compra é real.\"",
+      "truncated": false,
+      "stats": {
+        "nodeCount": 98,
+        "refCount": 11,
+        "textLength": 1991,
+        "iframeCount": 0,
+        "maxDepth": 10
+      }
+    }
+  },
+  {
+    "acao": "Aplicar cupom com minúsculas e espaços; conferir normalização e total",
+    "horario": "2026-10-20T16:12:05.708Z",
+    "snapshot": {
+      "command": "snapshot",
+      "browserId": "da9ae0e7-5f4b-4339-bf0a-4c58d8d54c45",
+      "workspaceId": "wks_9c9ce8494a43e657",
+      "url": "https://verzel-store.qa-test-verzel-store.workers.dev/carrinho",
+      "title": "Carrinho | Verzel Store",
+      "format": "aria-yaml",
+      "snapshot": "- document \"Carrinho | Verzel Store\"\n  - note\n    - text: \"Ambiente de teste técnico do processo seletivo de QA da Verzel.\"\n    - link \"Leia a documentação antes de começar.\" [ref=@e1]\n      - text: \"Leia a documentação antes de começar.\"\n  - banner\n    - link \"Verzel Store, página inicial\" [ref=@e2]\n      - text: \"verzel\"\n      - text: \"store\"\n    - navigation \"Principal\"\n      - link \"Produtos\" [ref=@e3]\n        - text: \"Produtos\"\n      - link \"Documentação\" [ref=@e4]\n        - text: \"Documentação\"\n      - link \"Carrinho1\" [ref=@e5]\n        - text: \"Carrinho\"\n        - text: \"1\"\n  - main\n    - heading \"Carrinho\" [level=1]\n      - text: \"Carrinho\"\n    - button \"Esvaziar carrinho\" [ref=@e6]\n      - text: \"Esvaziar carrinho\"\n    - list\n      - listitem\n        - heading \"Mochila Urbana 20L\" [level=3]\n          - text: \"Mochila Urbana 20L\"\n        - text: \"R$ 100,00\"\n        - text: \"cada\"\n        - group \"Quantidade de Mochila Urbana 20L\"\n          - button \"Diminuir quantidade de Mochila Urbana 20L\"\n            - text: \"-\"\n          - text: \"1\"\n          - button \"Aumentar quantidade de Mochila Urbana 20L\" [ref=@e7]\n            - text: \"+\"\n        - text: \"R$ 100,00\"\n        - button \"Remover Mochila Urbana 20L do carrinho\" [ref=@e8]\n          - text: \"Remover\"\n    - text: \"Cupom de desconto\"\n    - textbox \"Cupom de desconto\" [ref=@e9]\n    - button \"Aplicar cupom\" [ref=@e10]\n      - text: \"Aplicar cupom\"\n    - alert\n      - text: \"Informe um cupom.\"\n    - heading \"Resumo do pedido\" [level=2]\n      - text: \"Resumo do pedido\"\n    - text: \"Subtotal\"\n    - text: \"R$ 100,00\"\n    - text: \"Desconto\"\n    - text: \"R$ 0,00\"\n    - text: \"Frete\"\n    - text: \"R$ 19,90\"\n    - text: \"Total\"\n    - text: \"R$ 119,90\"\n    - text: \"Faltam\"\n    - text: \"R$ 100,00\"\n    - text: \"para o frete grátis.\"\n    - link \"Finalizar compra\" [ref=@e11]\n      - text: \"Finalizar compra\"\n  - contentinfo\n    - text: \"Verzel Store é um ambiente fictício criado para o teste técnico do processo seletivo de QA da Verzel. Nenhuma compra é real.\"",
+      "truncated": false,
+      "stats": {
+        "nodeCount": 100,
+        "refCount": 11,
+        "textLength": 2037,
+        "iframeCount": 0,
+        "maxDepth": 10
+      }
+    }
+  },
+  {
+    "acao": "Redigitar cupom com browser_type após limitação do browser_fill",
+    "horario": "2026-10-20T16:12:21.236Z",
+    "snapshot": {
+      "command": "snapshot",
+      "browserId": "da9ae0e7-5f4b-4339-bf0a-4c58d8d54c45",
+      "workspaceId": "wks_9c9ce8494a43e657",
+      "url": "https://verzel-store.qa-test-verzel-store.workers.dev/carrinho",
+      "title": "Carrinho | Verzel Store",
+      "format": "aria-yaml",
+      "snapshot": "- document \"Carrinho | Verzel Store\"\n  - note\n    - text: \"Ambiente de teste técnico do processo seletivo de QA da Verzel.\"\n    - link \"Leia a documentação antes de começar.\" [ref=@e1]\n      - text: \"Leia a documentação antes de começar.\"\n  - banner\n    - link \"Verzel Store, página inicial\" [ref=@e2]\n      - text: \"verzel\"\n      - text: \"store\"\n    - navigation \"Principal\"\n      - link \"Produtos\" [ref=@e3]\n        - text: \"Produtos\"\n      - link \"Documentação\" [ref=@e4]\n        - text: \"Documentação\"\n      - link \"Carrinho1\" [ref=@e5]\n        - text: \"Carrinho\"\n        - text: \"1\"\n  - main\n    - heading \"Carrinho\" [level=1]\n      - text: \"Carrinho\"\n    - button \"Esvaziar carrinho\" [ref=@e6]\n      - text: \"Esvaziar carrinho\"\n    - list\n      - listitem\n        - heading \"Mochila Urbana 20L\" [level=3]\n          - text: \"Mochila Urbana 20L\"\n        - text: \"R$ 100,00\"\n        - text: \"cada\"\n        - group \"Quantidade de Mochila Urbana 20L\"\n          - button \"Diminuir quantidade de Mochila Urbana 20L\"\n            - text: \"-\"\n          - text: \"1\"\n          - button \"Aumentar quantidade de Mochila Urbana 20L\" [ref=@e7]\n            - text: \"+\"\n        - text: \"R$ 100,00\"\n        - button \"Remover Mochila Urbana 20L do carrinho\" [ref=@e8]\n          - text: \"Remover\"\n    - text: \"Cupom\"\n    - text: \"BEMVINDO10\"\n    - text: \"aplicado.\"\n    - button \"Remover cupom\" [ref=@e9]\n      - text: \"Remover cupom\"\n    - heading \"Resumo do pedido\" [level=2]\n      - text: \"Resumo do pedido\"\n    - text: \"Subtotal\"\n    - text: \"R$ 100,00\"\n    - text: \"Desconto\"\n    - text: \"(BEMVINDO10)\"\n    - text: \"- R$ 10,00\"\n    - text: \"Frete\"\n    - text: \"R$ 19,90\"\n    - text: \"Total\"\n    - text: \"R$ 109,90\"\n    - text: \"Faltam\"\n    - text: \"R$ 100,00\"\n    - text: \"para o frete grátis.\"\n    - link \"Finalizar compra\" [ref=@e10]\n      - text: \"Finalizar compra\"\n  - contentinfo\n    - text: \"Verzel Store é um ambiente fictício criado para o teste técnico do processo seletivo de QA da Verzel. Nenhuma compra é real.\"",
+      "truncated": false,
+      "stats": {
+        "nodeCount": 100,
+        "refCount": 10,
+        "textLength": 2013,
+        "iframeCount": 0,
+        "maxDepth": 10
+      }
+    }
+  },
+  {
+    "acao": "Aumentar para duas mochilas com cupom; confirmar BUG-001 e aviso contraditório",
+    "horario": "2026-10-20T16:12:47.516Z",
+    "snapshot": {
+      "command": "snapshot",
+      "browserId": "da9ae0e7-5f4b-4339-bf0a-4c58d8d54c45",
+      "workspaceId": "wks_9c9ce8494a43e657",
+      "url": "https://verzel-store.qa-test-verzel-store.workers.dev/carrinho",
+      "title": "Carrinho | Verzel Store",
+      "format": "aria-yaml",
+      "snapshot": "- document \"Carrinho | Verzel Store\"\n  - note\n    - text: \"Ambiente de teste técnico do processo seletivo de QA da Verzel.\"\n    - link \"Leia a documentação antes de começar.\" [ref=@e1]\n      - text: \"Leia a documentação antes de começar.\"\n  - banner\n    - link \"Verzel Store, página inicial\" [ref=@e2]\n      - text: \"verzel\"\n      - text: \"store\"\n    - navigation \"Principal\"\n      - link \"Produtos\" [ref=@e3]\n        - text: \"Produtos\"\n      - link \"Documentação\" [ref=@e4]\n        - text: \"Documentação\"\n      - link \"Carrinho2\" [ref=@e5]\n        - text: \"Carrinho\"\n        - text: \"2\"\n  - main\n    - heading \"Carrinho\" [level=1]\n      - text: \"Carrinho\"\n    - button \"Esvaziar carrinho\" [ref=@e6]\n      - text: \"Esvaziar carrinho\"\n    - list\n      - listitem\n        - heading \"Mochila Urbana 20L\" [level=3]\n          - text: \"Mochila Urbana 20L\"\n        - text: \"R$ 100,00\"\n        - text: \"cada\"\n        - group \"Quantidade de Mochila Urbana 20L\"\n          - button \"Diminuir quantidade de Mochila Urbana 20L\" [ref=@e7]\n            - text: \"-\"\n          - text: \"2\"\n          - button \"Aumentar quantidade de Mochila Urbana 20L\" [ref=@e8]\n            - text: \"+\"\n        - text: \"R$ 200,00\"\n        - button \"Remover Mochila Urbana 20L do carrinho\" [ref=@e9]\n          - text: \"Remover\"\n    - text: \"Cupom\"\n    - text: \"BEMVINDO10\"\n    - text: \"aplicado.\"\n    - button \"Remover cupom\" [ref=@e10]\n      - text: \"Remover cupom\"\n    - heading \"Resumo do pedido\" [level=2]\n      - text: \"Resumo do pedido\"\n    - text: \"Subtotal\"\n    - text: \"R$ 200,00\"\n    - text: \"Desconto\"\n    - text: \"(BEMVINDO10)\"\n    - text: \"- R$ 20,00\"\n    - text: \"Frete\"\n    - text: \"R$ 19,90\"\n    - text: \"Total\"\n    - text: \"R$ 199,90\"\n    - text: \"Faltam\"\n    - text: \"R$ 0,00\"\n    - text: \"para o frete grátis.\"\n    - link \"Finalizar compra\" [ref=@e11]\n      - text: \"Finalizar compra\"\n  - contentinfo\n    - text: \"Verzel Store é um ambiente fictício criado para o teste técnico do processo seletivo de QA da Verzel. Nenhuma compra é real.\"",
+      "truncated": false,
+      "stats": {
+        "nodeCount": 100,
+        "refCount": 11,
+        "textLength": 2022,
+        "iframeCount": 0,
+        "maxDepth": 10
+      }
+    }
+  },
+  {
+    "acao": "Remover cupom e esvaziar carrinho; estado vazio e navegação",
+    "horario": "2026-10-20T16:13:02.265Z",
+    "snapshot": {
+      "command": "snapshot",
+      "browserId": "da9ae0e7-5f4b-4339-bf0a-4c58d8d54c45",
+      "workspaceId": "wks_9c9ce8494a43e657",
+      "url": "https://verzel-store.qa-test-verzel-store.workers.dev/carrinho",
+      "title": "Carrinho | Verzel Store",
+      "format": "aria-yaml",
+      "snapshot": "- document \"Carrinho | Verzel Store\"\n  - note\n    - text: \"Ambiente de teste técnico do processo seletivo de QA da Verzel.\"\n    - link \"Leia a documentação antes de começar.\" [ref=@e1]\n      - text: \"Leia a documentação antes de começar.\"\n  - banner\n    - link \"Verzel Store, página inicial\" [ref=@e2]\n      - text: \"verzel\"\n      - text: \"store\"\n    - navigation \"Principal\"\n      - link \"Produtos\" [ref=@e3]\n        - text: \"Produtos\"\n      - link \"Documentação\" [ref=@e4]\n        - text: \"Documentação\"\n      - link \"Carrinho0\" [ref=@e5]\n        - text: \"Carrinho\"\n        - text: \"0\"\n  - main\n    - heading \"Seu carrinho está vazio\" [level=1]\n      - text: \"Seu carrinho está vazio\"\n    - text: \"Escolha um produto na vitrine para começar.\"\n    - link \"Ver produtos\" [ref=@e6]\n      - text: \"Ver produtos\"\n  - contentinfo\n    - text: \"Verzel Store é um ambiente fictício criado para o teste técnico do processo seletivo de QA da Verzel. Nenhuma compra é real.\"",
+      "truncated": false,
+      "stats": {
+        "nodeCount": 39,
+        "refCount": 6,
+        "textLength": 964,
+        "iframeCount": 0,
+        "maxDepth": 7
+      }
+    }
+  }
+]

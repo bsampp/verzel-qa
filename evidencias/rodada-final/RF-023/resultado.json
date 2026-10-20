@@ -1,0 +1,18 @@
+{
+  "id": "RF-023",
+  "cenario": "CT12",
+  "titulo": "CT12 API quantidade 5 em /api/pedidos",
+  "arquivo": "contratos.api.spec.ts",
+  "linha": 34,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:13:28.484Z",
+  "duracaoMs": 86,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "resposta-api",
+      "arquivo": "RF-023/resposta-api-0.json"
+    }
+  ]
+}

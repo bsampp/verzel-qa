@@ -1,0 +1,19 @@
+{
+  "coletadoEm": "2026-10-20T16:13:32.613Z",
+  "url": "https://verzel-store.qa-test-verzel-store.workers.dev/api/carrinho/calcular",
+  "status": 400,
+  "requisicao": {
+    "nome": "JSON malformado",
+    "metodo": "POST",
+    "url": "/api/carrinho/calcular",
+    "status": 400,
+    "codigo": "JSON_INVALIDO",
+    "data": "{"
+  },
+  "resposta": {
+    "erro": {
+      "codigo": "JSON_INVALIDO",
+      "mensagem": "O corpo da requisição deve ser um objeto JSON válido."
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "RF-034",
+  "cenario": "CT16",
+  "titulo": "CT16 API nome sem sobrenome",
+  "arquivo": "contratos.api.spec.ts",
+  "linha": 70,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:13:31.100Z",
+  "duracaoMs": 112,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "resposta-api",
+      "arquivo": "RF-034/resposta-api-0.json"
+    }
+  ]
+}

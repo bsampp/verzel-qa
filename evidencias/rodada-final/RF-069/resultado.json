@@ -1,0 +1,18 @@
+{
+  "id": "RF-069",
+  "cenario": "CT20",
+  "titulo": "CT20 API — subtotal 209.8, com cupom",
+  "arquivo": "frete.api.spec.ts",
+  "linha": 15,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:14:32.674Z",
+  "duracaoMs": 84,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "calculo-carrinho",
+      "arquivo": "RF-069/calculo-carrinho-0.json"
+    }
+  ]
+}

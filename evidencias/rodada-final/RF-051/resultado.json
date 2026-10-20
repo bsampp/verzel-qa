@@ -1,0 +1,22 @@
+{
+  "id": "RF-051",
+  "cenario": "CT05",
+  "titulo": "CT05 — remover, rejeitar outro cupom e reaplicar sem acumular desconto",
+  "arquivo": "fluxos.spec.ts",
+  "linha": 17,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:13:39.414Z",
+  "duracaoMs": 1549,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "tela",
+      "arquivo": "RF-051/tela-0.png"
+    },
+    {
+      "nome": "conteudo",
+      "arquivo": "RF-051/conteudo-1.json"
+    }
+  ]
+}

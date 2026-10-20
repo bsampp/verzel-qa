@@ -1,0 +1,30 @@
+{
+  "id": "RF-053",
+  "cenario": "CT11",
+  "titulo": "CT11 — limitar quantidade no catálogo e carrinho e permitir voltar a cinco",
+  "arquivo": "fluxos.spec.ts",
+  "linha": 55,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:13:54.964Z",
+  "duracaoMs": 2404,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "tela",
+      "arquivo": "RF-053/tela-0.png"
+    },
+    {
+      "nome": "conteudo",
+      "arquivo": "RF-053/conteudo-1.json"
+    },
+    {
+      "nome": "tela",
+      "arquivo": "RF-053/tela-2.png"
+    },
+    {
+      "nome": "conteudo",
+      "arquivo": "RF-053/conteudo-3.json"
+    }
+  ]
+}

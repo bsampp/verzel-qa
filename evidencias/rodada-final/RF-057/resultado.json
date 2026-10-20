@@ -1,0 +1,22 @@
+{
+  "id": "RF-057",
+  "cenario": "CT08",
+  "titulo": "CT08 UI — fronteira de frete sem cupom",
+  "arquivo": "fluxos.spec.ts",
+  "linha": 91,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:14:13.988Z",
+  "duracaoMs": 1276,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "tela",
+      "arquivo": "RF-057/tela-0.png"
+    },
+    {
+      "nome": "conteudo",
+      "arquivo": "RF-057/conteudo-1.json"
+    }
+  ]
+}

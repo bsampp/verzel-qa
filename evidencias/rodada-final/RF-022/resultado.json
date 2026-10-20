@@ -1,0 +1,18 @@
+{
+  "id": "RF-022",
+  "cenario": "CT04",
+  "titulo": "CT04 API cupom \"VERAO2026\" em /api/pedidos",
+  "arquivo": "contratos.api.spec.ts",
+  "linha": 16,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:13:28.369Z",
+  "duracaoMs": 101,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "resposta-api",
+      "arquivo": "RF-022/resposta-api-0.json"
+    }
+  ]
+}

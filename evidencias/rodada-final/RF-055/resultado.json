@@ -1,0 +1,22 @@
+{
+  "id": "RF-055",
+  "cenario": "CT06",
+  "titulo": "CT06 UI — fronteira de frete sem cupom",
+  "arquivo": "fluxos.spec.ts",
+  "linha": 91,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:13:59.249Z",
+  "duracaoMs": 1700,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "tela",
+      "arquivo": "RF-055/tela-0.png"
+    },
+    {
+      "nome": "conteudo",
+      "arquivo": "RF-055/conteudo-1.json"
+    }
+  ]
+}

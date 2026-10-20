@@ -1,0 +1,18 @@
+{
+  "id": "RF-005",
+  "cenario": "CT03",
+  "titulo": "CT03 API cupom \"INEXISTENTE\" em /api/carrinho/calcular",
+  "arquivo": "contratos.api.spec.ts",
+  "linha": 16,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:13:25.053Z",
+  "duracaoMs": 122,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "resposta-api",
+      "arquivo": "RF-005/resposta-api-0.json"
+    }
+  ]
+}

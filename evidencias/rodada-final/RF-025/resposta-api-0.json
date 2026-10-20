@@ -1,0 +1,22 @@
+{
+  "coletadoEm": "2026-10-20T16:13:29.841Z",
+  "url": "https://verzel-store.qa-test-verzel-store.workers.dev/api/pedidos",
+  "status": 422,
+  "requisicao": {
+    "metodo": "POST",
+    "payload": {
+      "cliente": {
+        "nome": "Maria Silva",
+        "email": "maria@example.com",
+        "cep": "01310-100"
+      }
+    }
+  },
+  "resposta": {
+    "erro": {
+      "codigo": "ITENS_OBRIGATORIOS",
+      "mensagem": "Informe ao menos um item.",
+      "campo": "itens"
+    }
+  }
+}

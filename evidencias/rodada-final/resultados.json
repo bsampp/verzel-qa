@@ -1,0 +1,1425 @@
+{
+  "comando": "npm test",
+  "ambiente": {
+    "node": "26.8.1",
+    "playwright": "1.64.1",
+    "so": "Linux x86_64",
+    "documentacao": "VZS-142 2.3.0"
+  },
+  "estatisticas": {
+    "startTime": "2026-10-20T16:13:10.570Z",
+    "duration": 82246.195,
+    "expected": 61,
+    "skipped": 0,
+    "unexpected": 8,
+    "flaky": 0
+  },
+  "resultados": [
+    {
+      "id": "RF-001",
+      "cenario": "CT09",
+      "titulo": "CT09 — manter frete grátis com subtotal de R$ 200 e cupom de 10%",
+      "arquivo": "carrinho.spec.ts",
+      "linha": 3,
+      "estado": "failed",
+      "inicio": "2026-10-20T16:13:11.768Z",
+      "duracaoMs": 11522,
+      "bug": "BUG-001",
+      "erros": [
+        "Error: expect(locator).toHaveText(expected) failed\n\nLocator: getByRole('region', { name: 'Resumo do pedido' }).locator('[data-valor=\"frete\"]')\nExpected pattern: /^(Grátis|R\\$\\s0,00)$/i\nReceived string:  \"R$ 19,90\"\nTimeout: 5000ms\n\nCall log:\n  - Expect \"soft toHaveText\" getByRole('region', { name: 'Resumo do pedido' }).locator('[data-valor=\"frete\"]') with timeout 5000ms\n  - waiting for getByRole('region', { name: 'Resumo do pedido' }).locator('[data-valor=\"frete\"]')\n    14 × locator resolved to <dd data-valor=\"frete\">R$ 19,90</dd>\n       - unexpected value \"R$ 19,90\"\n\n\n  41 |     await expect(resumo.locator('[data-valor=\"desconto\"]')).toHaveText('- R$ 20,00');\n  42 |     // Soft permite relatar frete e total incorretos na mesma execução.\n> 43 |     await expect.soft(resumo.locator('[data-valor=\"frete\"]')).toHaveText(/^(Grátis|R\\$\\s0,00)$/i);\n     |                                                               ^\n  44 |     await expect.soft(resumo.locator('[data-valor=\"total\"]')).toHaveText('R$ 180,00');\n  45 |   });\n  46 | });\n    at /home/bsampp/projects/verzel-qa/tests/carrinho.spec.ts:43:63\n    at /home/bsampp/projects/verzel-qa/tests/carrinho.spec.ts:38:3",
+        "Error: expect(locator).toHaveText(expected) failed\n\nLocator:  getByRole('region', { name: 'Resumo do pedido' }).locator('[data-valor=\"total\"]')\nExpected: \"R$ 180,00\"\nReceived: \"R$ 199,90\"\nTimeout:  5000ms\n\nCall log:\n  - Expect \"soft toHaveText\" getByRole('region', { name: 'Resumo do pedido' }).locator('[data-valor=\"total\"]') with timeout 5000ms\n  - waiting for getByRole('region', { name: 'Resumo do pedido' }).locator('[data-valor=\"total\"]')\n    14 × locator resolved to <dd data-valor=\"total\">R$ 199,90</dd>\n       - unexpected value \"R$ 199,90\"\n\n\n  42 |     // Soft permite relatar frete e total incorretos na mesma execução.\n  43 |     await expect.soft(resumo.locator('[data-valor=\"frete\"]')).toHaveText(/^(Grátis|R\\$\\s0,00)$/i);\n> 44 |     await expect.soft(resumo.locator('[data-valor=\"total\"]')).toHaveText('R$ 180,00');\n     |                                                               ^\n  45 |   });\n  46 | });\n  47 |\n    at /home/bsampp/projects/verzel-qa/tests/carrinho.spec.ts:44:63\n    at /home/bsampp/projects/verzel-qa/tests/carrinho.spec.ts:38:3"
+      ],
+      "evidencias": [
+        {
+          "nome": "calculo-carrinho",
+          "arquivo": "RF-001/calculo-carrinho-0.json"
+        },
+        {
+          "nome": "screenshot",
+          "arquivo": "RF-001/screenshot-1.png"
+        },
+        {
+          "nome": "error-context",
+          "arquivo": "RF-001/error-context-2.md"
+        }
+      ]
+    },
+    {
+      "id": "RF-002",
+      "cenario": "CT01",
+      "titulo": "CT01 API cupom \"BEMVINDO10\" em /api/carrinho/calcular",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 16,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:24.552Z",
+      "duracaoMs": 192,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-002/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-003",
+      "cenario": "CT02",
+      "titulo": "CT02-minúsculas API cupom \"bemvindo10\" em /api/carrinho/calcular",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 16,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:24.798Z",
+      "duracaoMs": 96,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-003/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-004",
+      "cenario": "CT02",
+      "titulo": "CT02-espaços API cupom \"  BeMvInDo10  \" em /api/carrinho/calcular",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 16,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:24.924Z",
+      "duracaoMs": 115,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-004/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-005",
+      "cenario": "CT03",
+      "titulo": "CT03 API cupom \"INEXISTENTE\" em /api/carrinho/calcular",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 16,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:25.053Z",
+      "duracaoMs": 122,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-005/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-006",
+      "cenario": "CT04",
+      "titulo": "CT04 API cupom \"VERAO2026\" em /api/carrinho/calcular",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 16,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:25.191Z",
+      "duracaoMs": 91,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-006/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-007",
+      "cenario": "CT12",
+      "titulo": "CT12 API quantidade 5 em /api/carrinho/calcular",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 34,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:25.300Z",
+      "duracaoMs": 126,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-007/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-008",
+      "cenario": "CT12",
+      "titulo": "CT12 API quantidade 6 em /api/carrinho/calcular",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 34,
+      "estado": "failed",
+      "inicio": "2026-10-20T16:13:25.444Z",
+      "duracaoMs": 118,
+      "bug": "BUG-002",
+      "erros": [
+        "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 422\nReceived: 200\n\n  36 |       const resposta = await request.post(rota, { data: payload });\n  37 |       const corpo = await registrarResposta(resposta, { metodo: 'POST', payload }, info);\n> 38 |       expect(resposta.status()).toBe(quantidade === 6 ? 422 : rota === '/api/pedidos' ? 201 : 200);\n     |                                 ^\n  39 |       if (quantidade === 6) expect(corpo.erro.codigo).toBe('QUANTIDADE_MAXIMA_EXCEDIDA');\n  40 |       else expect(corpo.itens[0].quantidade).toBe(5);\n  41 |     });\n    at /home/bsampp/projects/verzel-qa/tests/contratos.api.spec.ts:38:33"
+      ],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-008/resposta-api-0.json"
+        },
+        {
+          "nome": "error-context",
+          "arquivo": "RF-008/error-context-1.md"
+        }
+      ]
+    },
+    {
+      "id": "RF-009",
+      "cenario": "CT15",
+      "titulo": "CT15 API ausentes em /api/carrinho/calcular",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 53,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:26.388Z",
+      "duracaoMs": 183,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-009/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-010",
+      "cenario": "CT15",
+      "titulo": "CT15 API vazios em /api/carrinho/calcular",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 53,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:26.624Z",
+      "duracaoMs": 151,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-010/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-011",
+      "cenario": "CT15",
+      "titulo": "CT15 API item não objeto em /api/carrinho/calcular",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 53,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:26.812Z",
+      "duracaoMs": 162,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-011/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-012",
+      "cenario": "CT15",
+      "titulo": "CT15 API produto desconhecido em /api/carrinho/calcular",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 53,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:27.011Z",
+      "duracaoMs": 118,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-012/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-013",
+      "cenario": "CT15",
+      "titulo": "CT15 API duplicado em /api/carrinho/calcular",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 53,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:27.145Z",
+      "duracaoMs": 106,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-013/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-014",
+      "cenario": "CT15",
+      "titulo": "CT15 API quantidade 0 em /api/carrinho/calcular",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 53,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:27.275Z",
+      "duracaoMs": 125,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-014/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-015",
+      "cenario": "CT15",
+      "titulo": "CT15 API quantidade -1 em /api/carrinho/calcular",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 53,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:27.419Z",
+      "duracaoMs": 120,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-015/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-016",
+      "cenario": "CT15",
+      "titulo": "CT15 API quantidade 1.5 em /api/carrinho/calcular",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 53,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:27.566Z",
+      "duracaoMs": 108,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-016/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-017",
+      "cenario": "CT15",
+      "titulo": "CT15 API quantidade \"1\" em /api/carrinho/calcular",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 53,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:27.700Z",
+      "duracaoMs": 137,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-017/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-018",
+      "cenario": "CT01",
+      "titulo": "CT01 API cupom \"BEMVINDO10\" em /api/pedidos",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 16,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:27.857Z",
+      "duracaoMs": 91,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-018/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-019",
+      "cenario": "CT02",
+      "titulo": "CT02-minúsculas API cupom \"bemvindo10\" em /api/pedidos",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 16,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:27.973Z",
+      "duracaoMs": 125,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-019/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-020",
+      "cenario": "CT02",
+      "titulo": "CT02-espaços API cupom \"  BeMvInDo10  \" em /api/pedidos",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 16,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:28.116Z",
+      "duracaoMs": 94,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-020/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-021",
+      "cenario": "CT03",
+      "titulo": "CT03 API cupom \"INEXISTENTE\" em /api/pedidos",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 16,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:28.233Z",
+      "duracaoMs": 121,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-021/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-022",
+      "cenario": "CT04",
+      "titulo": "CT04 API cupom \"VERAO2026\" em /api/pedidos",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 16,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:28.369Z",
+      "duracaoMs": 101,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-022/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-023",
+      "cenario": "CT12",
+      "titulo": "CT12 API quantidade 5 em /api/pedidos",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 34,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:28.484Z",
+      "duracaoMs": 86,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-023/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-024",
+      "cenario": "CT12",
+      "titulo": "CT12 API quantidade 6 em /api/pedidos",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 34,
+      "estado": "failed",
+      "inicio": "2026-10-20T16:13:28.585Z",
+      "duracaoMs": 133,
+      "bug": "BUG-002",
+      "erros": [
+        "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 422\nReceived: 201\n\n  36 |       const resposta = await request.post(rota, { data: payload });\n  37 |       const corpo = await registrarResposta(resposta, { metodo: 'POST', payload }, info);\n> 38 |       expect(resposta.status()).toBe(quantidade === 6 ? 422 : rota === '/api/pedidos' ? 201 : 200);\n     |                                 ^\n  39 |       if (quantidade === 6) expect(corpo.erro.codigo).toBe('QUANTIDADE_MAXIMA_EXCEDIDA');\n  40 |       else expect(corpo.itens[0].quantidade).toBe(5);\n  41 |     });\n    at /home/bsampp/projects/verzel-qa/tests/contratos.api.spec.ts:38:33"
+      ],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-024/resposta-api-0.json"
+        },
+        {
+          "nome": "error-context",
+          "arquivo": "RF-024/error-context-1.md"
+        }
+      ]
+    },
+    {
+      "id": "RF-025",
+      "cenario": "CT15",
+      "titulo": "CT15 API ausentes em /api/pedidos",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 53,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:29.642Z",
+      "duracaoMs": 164,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-025/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-026",
+      "cenario": "CT15",
+      "titulo": "CT15 API vazios em /api/pedidos",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 53,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:29.875Z",
+      "duracaoMs": 119,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-026/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-027",
+      "cenario": "CT15",
+      "titulo": "CT15 API item não objeto em /api/pedidos",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 53,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:30.023Z",
+      "duracaoMs": 105,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-027/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-028",
+      "cenario": "CT15",
+      "titulo": "CT15 API produto desconhecido em /api/pedidos",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 53,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:30.145Z",
+      "duracaoMs": 90,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-028/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-029",
+      "cenario": "CT15",
+      "titulo": "CT15 API duplicado em /api/pedidos",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 53,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:30.252Z",
+      "duracaoMs": 113,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-029/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-030",
+      "cenario": "CT15",
+      "titulo": "CT15 API quantidade 0 em /api/pedidos",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 53,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:30.387Z",
+      "duracaoMs": 202,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-030/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-031",
+      "cenario": "CT15",
+      "titulo": "CT15 API quantidade -1 em /api/pedidos",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 53,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:30.613Z",
+      "duracaoMs": 112,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-031/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-032",
+      "cenario": "CT15",
+      "titulo": "CT15 API quantidade 1.5 em /api/pedidos",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 53,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:30.756Z",
+      "duracaoMs": 113,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-032/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-033",
+      "cenario": "CT15",
+      "titulo": "CT15 API quantidade \"1\" em /api/pedidos",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 53,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:30.893Z",
+      "duracaoMs": 188,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-033/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-034",
+      "cenario": "CT16",
+      "titulo": "CT16 API nome sem sobrenome",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 70,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:31.100Z",
+      "duracaoMs": 112,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-034/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-035",
+      "cenario": "CT16",
+      "titulo": "CT16 API email inválido",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 70,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:31.233Z",
+      "duracaoMs": 124,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-035/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-036",
+      "cenario": "CT16",
+      "titulo": "CT16 API CEP curto",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 70,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:31.375Z",
+      "duracaoMs": 135,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-036/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-037",
+      "cenario": "CT16",
+      "titulo": "CT16 API CEP com hífen",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 70,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:31.535Z",
+      "duracaoMs": 109,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-037/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-038",
+      "cenario": "CT16",
+      "titulo": "CT16 API CEP sem hífen",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 70,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:31.659Z",
+      "duracaoMs": 104,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-038/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-039",
+      "cenario": "CT17",
+      "titulo": "CT17 API lista de produtos",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 91,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:31.777Z",
+      "duracaoMs": 126,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-039/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-040",
+      "cenario": "CT17",
+      "titulo": "CT17 API produto existente",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 91,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:31.918Z",
+      "duracaoMs": 132,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-040/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-041",
+      "cenario": "CT17",
+      "titulo": "CT17 API produto inexistente",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 91,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:32.069Z",
+      "duracaoMs": 76,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-041/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-042",
+      "cenario": "CT17",
+      "titulo": "CT17 API rota inexistente",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 91,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:32.175Z",
+      "duracaoMs": 127,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-042/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-043",
+      "cenario": "CT17",
+      "titulo": "CT17 API método não permitido",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 91,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:32.317Z",
+      "duracaoMs": 110,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-043/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-044",
+      "cenario": "CT17",
+      "titulo": "CT17 API JSON malformado",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 91,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:32.444Z",
+      "duracaoMs": 168,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-044/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-045",
+      "cenario": "CT13",
+      "titulo": "CT13 API — valores em centavos",
+      "arquivo": "contratos.api.spec.ts",
+      "linha": 103,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:32.627Z",
+      "duracaoMs": 86,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-045/resposta-api-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-046",
+      "cenario": "CT01",
+      "titulo": "CT01 — aplicar cupom válido com uma mochila",
+      "arquivo": "cupons.spec.ts",
+      "linha": 12,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:32.740Z",
+      "duracaoMs": 1293,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "calculo-carrinho",
+          "arquivo": "RF-046/calculo-carrinho-0.json"
+        },
+        {
+          "nome": "carrinho",
+          "arquivo": "RF-046/carrinho-1.png"
+        }
+      ]
+    },
+    {
+      "id": "RF-047",
+      "cenario": "CT03",
+      "titulo": "CT03 — rejeitar cupom inexistente com uma mochila",
+      "arquivo": "cupons.spec.ts",
+      "linha": 12,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:34.130Z",
+      "duracaoMs": 1234,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "calculo-carrinho",
+          "arquivo": "RF-047/calculo-carrinho-0.json"
+        },
+        {
+          "nome": "carrinho",
+          "arquivo": "RF-047/carrinho-1.png"
+        }
+      ]
+    },
+    {
+      "id": "RF-048",
+      "cenario": "CT02",
+      "titulo": "CT02-minúsculas — aplicar cupom válido com uma mochila",
+      "arquivo": "cupons.spec.ts",
+      "linha": 12,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:35.382Z",
+      "duracaoMs": 1243,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "calculo-carrinho",
+          "arquivo": "RF-048/calculo-carrinho-0.json"
+        },
+        {
+          "nome": "carrinho",
+          "arquivo": "RF-048/carrinho-1.png"
+        }
+      ]
+    },
+    {
+      "id": "RF-049",
+      "cenario": "CT02",
+      "titulo": "CT02-espaços — aplicar cupom válido com uma mochila",
+      "arquivo": "cupons.spec.ts",
+      "linha": 12,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:36.644Z",
+      "duracaoMs": 1455,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "calculo-carrinho",
+          "arquivo": "RF-049/calculo-carrinho-0.json"
+        },
+        {
+          "nome": "carrinho",
+          "arquivo": "RF-049/carrinho-1.png"
+        }
+      ]
+    },
+    {
+      "id": "RF-050",
+      "cenario": "CT04",
+      "titulo": "CT04 — rejeitar cupom expirado com uma mochila",
+      "arquivo": "cupons.spec.ts",
+      "linha": 12,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:38.118Z",
+      "duracaoMs": 1272,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "calculo-carrinho",
+          "arquivo": "RF-050/calculo-carrinho-0.json"
+        },
+        {
+          "nome": "carrinho",
+          "arquivo": "RF-050/carrinho-1.png"
+        }
+      ]
+    },
+    {
+      "id": "RF-051",
+      "cenario": "CT05",
+      "titulo": "CT05 — remover, rejeitar outro cupom e reaplicar sem acumular desconto",
+      "arquivo": "fluxos.spec.ts",
+      "linha": 17,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:39.414Z",
+      "duracaoMs": 1549,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "tela",
+          "arquivo": "RF-051/tela-0.png"
+        },
+        {
+          "nome": "conteudo",
+          "arquivo": "RF-051/conteudo-1.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-052",
+      "cenario": "CT10",
+      "titulo": "CT10 — recalcular ao passar de uma para duas mochilas e voltar",
+      "arquivo": "fluxos.spec.ts",
+      "linha": 36,
+      "estado": "failed",
+      "inicio": "2026-10-20T16:13:40.980Z",
+      "duracaoMs": 12324,
+      "bug": "BUG-001",
+      "erros": [
+        "Error: expect(locator).toHaveText(expected) failed\n\nLocator: locator('[data-valor=\"frete\"]')\nExpected pattern: /^(Grátis|R\\$\\s0,00)$/i\nReceived string:  \"R$ 19,90\"\nTimeout: 5000ms\n\nCall log:\n  - Expect \"soft toHaveText\" locator('[data-valor=\"frete\"]') with timeout 5000ms\n  - waiting for locator('[data-valor=\"frete\"]')\n    14 × locator resolved to <dd data-valor=\"frete\">R$ 19,90</dd>\n       - unexpected value \"R$ 19,90\"\n\n\n  44 |   await expect(page.locator('[data-valor=\"desconto\"]')).toHaveText('- R$ 20,00');\n  45 |   await registrarTela(page, info);\n> 46 |   await expect.soft(page.locator('[data-valor=\"frete\"]')).toHaveText(/^(Grátis|R\\$\\s0,00)$/i);\n     |                                                           ^\n  47 |   await expect.soft(page.locator('[data-valor=\"total\"]')).toHaveText('R$ 180,00');\n  48 |   await page.getByRole('button', { name: 'Diminuir quantidade de Mochila Urbana 20L', exact: true }).click();\n  49 |   await expect(page.locator('[data-valor=\"subtotal\"]')).toHaveText('R$ 100,00');\n    at /home/bsampp/projects/verzel-qa/tests/fluxos.spec.ts:46:59",
+        "Error: expect(locator).toHaveText(expected) failed\n\nLocator:  locator('[data-valor=\"total\"]')\nExpected: \"R$ 180,00\"\nReceived: \"R$ 199,90\"\nTimeout:  5000ms\n\nCall log:\n  - Expect \"soft toHaveText\" locator('[data-valor=\"total\"]') with timeout 5000ms\n  - waiting for locator('[data-valor=\"total\"]')\n    14 × locator resolved to <dd data-valor=\"total\">R$ 199,90</dd>\n       - unexpected value \"R$ 199,90\"\n\n\n  45 |   await registrarTela(page, info);\n  46 |   await expect.soft(page.locator('[data-valor=\"frete\"]')).toHaveText(/^(Grátis|R\\$\\s0,00)$/i);\n> 47 |   await expect.soft(page.locator('[data-valor=\"total\"]')).toHaveText('R$ 180,00');\n     |                                                           ^\n  48 |   await page.getByRole('button', { name: 'Diminuir quantidade de Mochila Urbana 20L', exact: true }).click();\n  49 |   await expect(page.locator('[data-valor=\"subtotal\"]')).toHaveText('R$ 100,00');\n  50 |   await expect(page.locator('[data-valor=\"desconto\"]')).toHaveText('- R$ 10,00');\n    at /home/bsampp/projects/verzel-qa/tests/fluxos.spec.ts:47:59"
+      ],
+      "evidencias": [
+        {
+          "nome": "tela",
+          "arquivo": "RF-052/tela-0.png"
+        },
+        {
+          "nome": "conteudo",
+          "arquivo": "RF-052/conteudo-1.json"
+        },
+        {
+          "nome": "screenshot",
+          "arquivo": "RF-052/screenshot-2.png"
+        },
+        {
+          "nome": "tela",
+          "arquivo": "RF-052/tela-3.png"
+        },
+        {
+          "nome": "conteudo",
+          "arquivo": "RF-052/conteudo-4.json"
+        },
+        {
+          "nome": "error-context",
+          "arquivo": "RF-052/error-context-5.md"
+        }
+      ]
+    },
+    {
+      "id": "RF-053",
+      "cenario": "CT11",
+      "titulo": "CT11 — limitar quantidade no catálogo e carrinho e permitir voltar a cinco",
+      "arquivo": "fluxos.spec.ts",
+      "linha": 55,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:54.964Z",
+      "duracaoMs": 2404,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "tela",
+          "arquivo": "RF-053/tela-0.png"
+        },
+        {
+          "nome": "conteudo",
+          "arquivo": "RF-053/conteudo-1.json"
+        },
+        {
+          "nome": "tela",
+          "arquivo": "RF-053/tela-2.png"
+        },
+        {
+          "nome": "conteudo",
+          "arquivo": "RF-053/conteudo-3.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-054",
+      "cenario": "CT13",
+      "titulo": "CT13 — apresentar desconto e total com centavos corretos",
+      "arquivo": "fluxos.spec.ts",
+      "linha": 74,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:57.694Z",
+      "duracaoMs": 1516,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "tela",
+          "arquivo": "RF-054/tela-0.png"
+        },
+        {
+          "nome": "conteudo",
+          "arquivo": "RF-054/conteudo-1.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-055",
+      "cenario": "CT06",
+      "titulo": "CT06 UI — fronteira de frete sem cupom",
+      "arquivo": "fluxos.spec.ts",
+      "linha": 91,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:13:59.249Z",
+      "duracaoMs": 1700,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "tela",
+          "arquivo": "RF-055/tela-0.png"
+        },
+        {
+          "nome": "conteudo",
+          "arquivo": "RF-055/conteudo-1.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-056",
+      "cenario": "CT07",
+      "titulo": "CT07 UI — fronteira de frete sem cupom",
+      "arquivo": "fluxos.spec.ts",
+      "linha": 91,
+      "estado": "failed",
+      "inicio": "2026-10-20T16:14:00.976Z",
+      "duracaoMs": 11686,
+      "bug": "BUG-001",
+      "erros": [
+        "Error: expect(locator).toHaveText(expected) failed\n\nLocator: locator('[data-valor=\"frete\"]')\nExpected pattern: /^(Grátis|R\\$\\s0,00)$/i\nReceived string:  \"R$ 19,90\"\nTimeout: 5000ms\n\nCall log:\n  - Expect \"soft toHaveText\" locator('[data-valor=\"frete\"]') with timeout 5000ms\n  - waiting for locator('[data-valor=\"frete\"]')\n    14 × locator resolved to <dd data-valor=\"frete\">R$ 19,90</dd>\n       - unexpected value \"R$ 19,90\"\n\n\n  94 |     await page.getByRole('link', { name: /Carrinho/ }).click();\n  95 |     await expect(page.locator('[data-valor=\"subtotal\"]')).toHaveText(caso.subtotal);\n> 96 |     await expect.soft(page.locator('[data-valor=\"frete\"]')).toHaveText(caso.frete);\n     |                                                             ^\n  97 |     await expect.soft(page.locator('[data-valor=\"total\"]')).toHaveText(caso.total);\n  98 |     if (caso.faltante) await expect(page.getByText(caso.faltante, { exact: true })).toBeVisible();\n  99 |   });\n    at /home/bsampp/projects/verzel-qa/tests/fluxos.spec.ts:96:61",
+        "Error: expect(locator).toHaveText(expected) failed\n\nLocator:  locator('[data-valor=\"total\"]')\nExpected: \"R$ 200,00\"\nReceived: \"R$ 219,90\"\nTimeout:  5000ms\n\nCall log:\n  - Expect \"soft toHaveText\" locator('[data-valor=\"total\"]') with timeout 5000ms\n  - waiting for locator('[data-valor=\"total\"]')\n    14 × locator resolved to <dd data-valor=\"total\">R$ 219,90</dd>\n       - unexpected value \"R$ 219,90\"\n\n\n   95 |     await expect(page.locator('[data-valor=\"subtotal\"]')).toHaveText(caso.subtotal);\n   96 |     await expect.soft(page.locator('[data-valor=\"frete\"]')).toHaveText(caso.frete);\n>  97 |     await expect.soft(page.locator('[data-valor=\"total\"]')).toHaveText(caso.total);\n      |                                                             ^\n   98 |     if (caso.faltante) await expect(page.getByText(caso.faltante, { exact: true })).toBeVisible();\n   99 |   });\n  100 | }\n    at /home/bsampp/projects/verzel-qa/tests/fluxos.spec.ts:97:61"
+      ],
+      "evidencias": [
+        {
+          "nome": "screenshot",
+          "arquivo": "RF-056/screenshot-0.png"
+        },
+        {
+          "nome": "tela",
+          "arquivo": "RF-056/tela-1.png"
+        },
+        {
+          "nome": "conteudo",
+          "arquivo": "RF-056/conteudo-2.json"
+        },
+        {
+          "nome": "error-context",
+          "arquivo": "RF-056/error-context-3.md"
+        }
+      ]
+    },
+    {
+      "id": "RF-057",
+      "cenario": "CT08",
+      "titulo": "CT08 UI — fronteira de frete sem cupom",
+      "arquivo": "fluxos.spec.ts",
+      "linha": 91,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:14:13.988Z",
+      "duracaoMs": 1276,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "tela",
+          "arquivo": "RF-057/tela-0.png"
+        },
+        {
+          "nome": "conteudo",
+          "arquivo": "RF-057/conteudo-1.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-058",
+      "cenario": "CT14",
+      "titulo": "CT14 — confirmar pedido de 1 mochila(s) com cupom",
+      "arquivo": "fluxos.spec.ts",
+      "linha": 103,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:14:15.540Z",
+      "duracaoMs": 1416,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-058/resposta-api-0.json"
+        },
+        {
+          "nome": "tela",
+          "arquivo": "RF-058/tela-1.png"
+        },
+        {
+          "nome": "conteudo",
+          "arquivo": "RF-058/conteudo-2.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-059",
+      "cenario": "CT14",
+      "titulo": "CT14 — confirmar pedido de 2 mochila(s) com cupom",
+      "arquivo": "fluxos.spec.ts",
+      "linha": 103,
+      "estado": "failed",
+      "inicio": "2026-10-20T16:14:16.978Z",
+      "duracaoMs": 6818,
+      "bug": "BUG-001",
+      "erros": [
+        "Error: expect(received).toMatchObject(expected)\n\n- Expected  - 2\n+ Received  + 2\n\n  Object {\n    \"desconto\": 20,\n-   \"frete\": 0,\n+   \"frete\": 19.9,\n    \"subtotal\": 200,\n-   \"total\": 180,\n+   \"total\": 199.9,\n  }\n\n  117 |     expect(corpo.numero).toMatch(/^VZ-\\d{6}$/);\n  118 |     const esperado = quantidade === 1 ? { subtotal: 100, desconto: 10, frete: 19.9, total: 109.9 } : { subtotal: 200, desconto: 20, frete: 0, total: 180 };\n> 119 |     expect.soft(corpo).toMatchObject(esperado);\n      |                        ^\n  120 |     await expect(page.getByText(corpo.numero, { exact: false })).toBeVisible();\n  121 |     await expect.soft(page.locator('[data-valor=\"total\"]')).toHaveText(quantidade === 1 ? 'R$ 109,90' : 'R$ 180,00');\n  122 |   });\n    at /home/bsampp/projects/verzel-qa/tests/fluxos.spec.ts:119:24",
+        "Error: expect(locator).toHaveText(expected) failed\n\nLocator:  locator('[data-valor=\"total\"]')\nExpected: \"R$ 180,00\"\nReceived: \"R$ 199,90\"\nTimeout:  5000ms\n\nCall log:\n  - Expect \"soft toHaveText\" locator('[data-valor=\"total\"]') with timeout 5000ms\n  - waiting for locator('[data-valor=\"total\"]')\n    14 × locator resolved to <dd data-valor=\"total\">R$ 199,90</dd>\n       - unexpected value \"R$ 199,90\"\n\n\n  119 |     expect.soft(corpo).toMatchObject(esperado);\n  120 |     await expect(page.getByText(corpo.numero, { exact: false })).toBeVisible();\n> 121 |     await expect.soft(page.locator('[data-valor=\"total\"]')).toHaveText(quantidade === 1 ? 'R$ 109,90' : 'R$ 180,00');\n      |                                                             ^\n  122 |   });\n  123 | }\n  124 |\n    at /home/bsampp/projects/verzel-qa/tests/fluxos.spec.ts:121:61"
+      ],
+      "evidencias": [
+        {
+          "nome": "resposta-api",
+          "arquivo": "RF-059/resposta-api-0.json"
+        },
+        {
+          "nome": "screenshot",
+          "arquivo": "RF-059/screenshot-1.png"
+        },
+        {
+          "nome": "tela",
+          "arquivo": "RF-059/tela-2.png"
+        },
+        {
+          "nome": "conteudo",
+          "arquivo": "RF-059/conteudo-3.json"
+        },
+        {
+          "nome": "error-context",
+          "arquivo": "RF-059/error-context-4.md"
+        }
+      ]
+    },
+    {
+      "id": "RF-060",
+      "cenario": "CT16",
+      "titulo": "CT16 UI — nome sem sobrenome",
+      "arquivo": "fluxos.spec.ts",
+      "linha": 130,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:14:25.098Z",
+      "duracaoMs": 1613,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "tela",
+          "arquivo": "RF-060/tela-0.png"
+        },
+        {
+          "nome": "conteudo",
+          "arquivo": "RF-060/conteudo-1.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-061",
+      "cenario": "CT16",
+      "titulo": "CT16 UI — email inválido",
+      "arquivo": "fluxos.spec.ts",
+      "linha": 130,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:14:26.880Z",
+      "duracaoMs": 1201,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "tela",
+          "arquivo": "RF-061/tela-0.png"
+        },
+        {
+          "nome": "conteudo",
+          "arquivo": "RF-061/conteudo-1.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-062",
+      "cenario": "CT16",
+      "titulo": "CT16 UI — CEP curto",
+      "arquivo": "fluxos.spec.ts",
+      "linha": 130,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:14:28.113Z",
+      "duracaoMs": 1607,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "tela",
+          "arquivo": "RF-062/tela-0.png"
+        },
+        {
+          "nome": "conteudo",
+          "arquivo": "RF-062/conteudo-1.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-063",
+      "cenario": "CT06",
+      "titulo": "CT06 API — subtotal 199.8, sem cupom",
+      "arquivo": "frete.api.spec.ts",
+      "linha": 15,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:14:29.755Z",
+      "duracaoMs": 218,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "calculo-carrinho",
+          "arquivo": "RF-063/calculo-carrinho-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-064",
+      "cenario": "CT18",
+      "titulo": "CT18 API — subtotal 199.8, com cupom",
+      "arquivo": "frete.api.spec.ts",
+      "linha": 15,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:14:29.995Z",
+      "duracaoMs": 165,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "calculo-carrinho",
+          "arquivo": "RF-064/calculo-carrinho-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-065",
+      "cenario": "CT07",
+      "titulo": "CT07 API — subtotal 200, sem cupom",
+      "arquivo": "frete.api.spec.ts",
+      "linha": 15,
+      "estado": "failed",
+      "inicio": "2026-10-20T16:14:30.188Z",
+      "duracaoMs": 140,
+      "bug": "BUG-001",
+      "erros": [
+        "Error: frete\n\nexpect(received).toBe(expected) // Object.is equality\n\nExpected: 0\nReceived: 19.9\n\n  33 |     expect.soft(corpo.subtotal, 'subtotal').toBe(caso.subtotal);\n  34 |     expect.soft(corpo.desconto, 'desconto').toBe(caso.desconto);\n> 35 |     expect.soft(corpo.frete, 'frete').toBe(caso.frete);\n     |                                       ^\n  36 |     expect.soft(corpo.total, 'total').toBe(caso.total);\n  37 |     expect.soft(corpo.freteGratis, 'freteGratis').toBe(caso.frete === 0);\n  38 |     expect.soft(corpo.valorFaltanteFreteGratis, 'faltante').toBe(caso.faltante);\n    at /home/bsampp/projects/verzel-qa/tests/frete.api.spec.ts:35:39",
+        "Error: total\n\nexpect(received).toBe(expected) // Object.is equality\n\nExpected: 200\nReceived: 219.9\n\n  34 |     expect.soft(corpo.desconto, 'desconto').toBe(caso.desconto);\n  35 |     expect.soft(corpo.frete, 'frete').toBe(caso.frete);\n> 36 |     expect.soft(corpo.total, 'total').toBe(caso.total);\n     |                                       ^\n  37 |     expect.soft(corpo.freteGratis, 'freteGratis').toBe(caso.frete === 0);\n  38 |     expect.soft(corpo.valorFaltanteFreteGratis, 'faltante').toBe(caso.faltante);\n  39 |   });\n    at /home/bsampp/projects/verzel-qa/tests/frete.api.spec.ts:36:39",
+        "Error: freteGratis\n\nexpect(received).toBe(expected) // Object.is equality\n\nExpected: true\nReceived: false\n\n  35 |     expect.soft(corpo.frete, 'frete').toBe(caso.frete);\n  36 |     expect.soft(corpo.total, 'total').toBe(caso.total);\n> 37 |     expect.soft(corpo.freteGratis, 'freteGratis').toBe(caso.frete === 0);\n     |                                                   ^\n  38 |     expect.soft(corpo.valorFaltanteFreteGratis, 'faltante').toBe(caso.faltante);\n  39 |   });\n  40 | }\n    at /home/bsampp/projects/verzel-qa/tests/frete.api.spec.ts:37:51"
+      ],
+      "evidencias": [
+        {
+          "nome": "calculo-carrinho",
+          "arquivo": "RF-065/calculo-carrinho-0.json"
+        },
+        {
+          "nome": "error-context",
+          "arquivo": "RF-065/error-context-1.md"
+        }
+      ]
+    },
+    {
+      "id": "RF-066",
+      "cenario": "CT09",
+      "titulo": "CT09 API — subtotal 200, com cupom",
+      "arquivo": "frete.api.spec.ts",
+      "linha": 15,
+      "estado": "failed",
+      "inicio": "2026-10-20T16:14:31.287Z",
+      "duracaoMs": 195,
+      "bug": "BUG-001",
+      "erros": [
+        "Error: frete\n\nexpect(received).toBe(expected) // Object.is equality\n\nExpected: 0\nReceived: 19.9\n\n  33 |     expect.soft(corpo.subtotal, 'subtotal').toBe(caso.subtotal);\n  34 |     expect.soft(corpo.desconto, 'desconto').toBe(caso.desconto);\n> 35 |     expect.soft(corpo.frete, 'frete').toBe(caso.frete);\n     |                                       ^\n  36 |     expect.soft(corpo.total, 'total').toBe(caso.total);\n  37 |     expect.soft(corpo.freteGratis, 'freteGratis').toBe(caso.frete === 0);\n  38 |     expect.soft(corpo.valorFaltanteFreteGratis, 'faltante').toBe(caso.faltante);\n    at /home/bsampp/projects/verzel-qa/tests/frete.api.spec.ts:35:39",
+        "Error: total\n\nexpect(received).toBe(expected) // Object.is equality\n\nExpected: 180\nReceived: 199.9\n\n  34 |     expect.soft(corpo.desconto, 'desconto').toBe(caso.desconto);\n  35 |     expect.soft(corpo.frete, 'frete').toBe(caso.frete);\n> 36 |     expect.soft(corpo.total, 'total').toBe(caso.total);\n     |                                       ^\n  37 |     expect.soft(corpo.freteGratis, 'freteGratis').toBe(caso.frete === 0);\n  38 |     expect.soft(corpo.valorFaltanteFreteGratis, 'faltante').toBe(caso.faltante);\n  39 |   });\n    at /home/bsampp/projects/verzel-qa/tests/frete.api.spec.ts:36:39",
+        "Error: freteGratis\n\nexpect(received).toBe(expected) // Object.is equality\n\nExpected: true\nReceived: false\n\n  35 |     expect.soft(corpo.frete, 'frete').toBe(caso.frete);\n  36 |     expect.soft(corpo.total, 'total').toBe(caso.total);\n> 37 |     expect.soft(corpo.freteGratis, 'freteGratis').toBe(caso.frete === 0);\n     |                                                   ^\n  38 |     expect.soft(corpo.valorFaltanteFreteGratis, 'faltante').toBe(caso.faltante);\n  39 |   });\n  40 | }\n    at /home/bsampp/projects/verzel-qa/tests/frete.api.spec.ts:37:51"
+      ],
+      "evidencias": [
+        {
+          "nome": "calculo-carrinho",
+          "arquivo": "RF-066/calculo-carrinho-0.json"
+        },
+        {
+          "nome": "error-context",
+          "arquivo": "RF-066/error-context-1.md"
+        }
+      ]
+    },
+    {
+      "id": "RF-067",
+      "cenario": "CT08",
+      "titulo": "CT08 API — subtotal 229.9, sem cupom",
+      "arquivo": "frete.api.spec.ts",
+      "linha": 15,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:14:32.327Z",
+      "duracaoMs": 160,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "calculo-carrinho",
+          "arquivo": "RF-067/calculo-carrinho-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-068",
+      "cenario": "CT19",
+      "titulo": "CT19 API — subtotal 229.9, com cupom",
+      "arquivo": "frete.api.spec.ts",
+      "linha": 15,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:14:32.541Z",
+      "duracaoMs": 110,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "calculo-carrinho",
+          "arquivo": "RF-068/calculo-carrinho-0.json"
+        }
+      ]
+    },
+    {
+      "id": "RF-069",
+      "cenario": "CT20",
+      "titulo": "CT20 API — subtotal 209.8, com cupom",
+      "arquivo": "frete.api.spec.ts",
+      "linha": 15,
+      "estado": "passed",
+      "inicio": "2026-10-20T16:14:32.674Z",
+      "duracaoMs": 84,
+      "bug": null,
+      "erros": [],
+      "evidencias": [
+        {
+          "nome": "calculo-carrinho",
+          "arquivo": "RF-069/calculo-carrinho-0.json"
+        }
+      ]
+    }
+  ]
+}

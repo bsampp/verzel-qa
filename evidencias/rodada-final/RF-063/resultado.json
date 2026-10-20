@@ -1,0 +1,18 @@
+{
+  "id": "RF-063",
+  "cenario": "CT06",
+  "titulo": "CT06 API — subtotal 199.8, sem cupom",
+  "arquivo": "frete.api.spec.ts",
+  "linha": 15,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:14:29.755Z",
+  "duracaoMs": 218,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "calculo-carrinho",
+      "arquivo": "RF-063/calculo-carrinho-0.json"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "coletadoEm": "2026-10-20T16:13:25.419Z",
+  "url": "https://verzel-store.qa-test-verzel-store.workers.dev/api/carrinho/calcular",
+  "status": 200,
+  "requisicao": {
+    "metodo": "POST",
+    "payload": {
+      "cliente": {
+        "nome": "Maria Silva",
+        "email": "maria@example.com",
+        "cep": "01310-100"
+      },
+      "itens": [
+        {
+          "produtoId": "P006",
+          "quantidade": 5
+        }
+      ]
+    }
+  },
+  "resposta": {
+    "itens": [
+      {
+        "produtoId": "P006",
+        "nome": "Kit 3 Pares de Meias",
+        "precoUnitario": 29.9,
+        "quantidade": 5,
+        "total": 149.5
+      }
+    ],
+    "subtotal": 149.5,
+    "desconto": 0,
+    "frete": 19.9,
+    "freteGratis": false,
+    "valorFaltanteFreteGratis": 50.5,
+    "total": 169.4,
+    "cupom": null
+  }
+}

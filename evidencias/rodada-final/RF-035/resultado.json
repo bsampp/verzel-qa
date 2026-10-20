@@ -1,0 +1,18 @@
+{
+  "id": "RF-035",
+  "cenario": "CT16",
+  "titulo": "CT16 API email inválido",
+  "arquivo": "contratos.api.spec.ts",
+  "linha": 70,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:13:31.233Z",
+  "duracaoMs": 124,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "resposta-api",
+      "arquivo": "RF-035/resposta-api-0.json"
+    }
+  ]
+}

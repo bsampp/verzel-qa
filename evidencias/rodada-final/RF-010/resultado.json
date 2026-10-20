@@ -1,0 +1,18 @@
+{
+  "id": "RF-010",
+  "cenario": "CT15",
+  "titulo": "CT15 API vazios em /api/carrinho/calcular",
+  "arquivo": "contratos.api.spec.ts",
+  "linha": 53,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:13:26.624Z",
+  "duracaoMs": 151,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "resposta-api",
+      "arquivo": "RF-010/resposta-api-0.json"
+    }
+  ]
+}

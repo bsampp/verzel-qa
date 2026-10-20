@@ -15,15 +15,21 @@ Fluxo: A fazer → Em andamento → Em revisão → Concluído. Relatos de defei
 
 ## Execução em slices
 
-Os slices abaixo atravessam regra, teste, execução e evidência. Aplicamos a ideia de slices verificáveis da skill `to-tickets` de Matt Pocock, adaptada a um projeto de QA sem acesso ao código da loja. As seis issues existentes continuam sendo o tracker; os slices não criam um segundo backlog de tickets. Não foi executado o setup completo das skills.
+Aplicamos a ideia de slices verificáveis da skill `to-tickets` de Matt Pocock: regra → cenário → execução → evidência → resultado. As seis issues existentes continuam sendo o tracker; não criamos tickets duplicados. Não foi executado o setup completo do conjunto de skills.
 
-| Slice | Critérios/cenários | Issues | Estado e entrega |
+| Slice | Critérios/cenários | Issues | Resultado final |
 | --- | --- | --- | --- |
-| Frete e desconto | CA01/06/07/08/09; CT06/07/08/09/18/19/20 | #2, #3, #4, #5 | Investigação API concluída; CT09 UI executado; BUG-001 confirmado. Não equivale à cobertura completa desses critérios. |
-| Cupons | CA01/02/03/04; CT01/02/03/04 | #2, #3, #4, #5 | CT01 e CT03 passaram na UI; faltam normalização, expirado e rejeição de pedido na API. |
-| Transições do carrinho | CA05/08; CT05/10 | #3, #4, #5 | Pendente; recalcular ao aplicar/remover cupom e mudar quantidade. |
-| Quantidade e arredondamento | CA10/11; CT11/12/13 | #2, #3, #4, #5 | Pendente; conferir limites na UI/API e centavos. |
-| Checkout e contratos | CT14/15/16/17 e variantes de CT03/04 | #3, #4, #5 | Pendente; confirmar valores do pedido e validações. |
-| Exploração e entrega | EXP01/02 e checklist final | #3, #4, #6 | Pendente; exploração, relatório final, clone limpo e revisão humana. |
+| Frete e desconto | CA01/06/07/08/09; CT06/07/08/09/18/19/20 | #2, #3, #4, #5 | Executado; BUG-001 no limite exato; demais valores da matriz conferem |
+| Cupons | CA01/02/03/04; CT01/02/03/04 | #2, #3, #4, #5 | Válido, inválido, expirado e normalização executados na UI/API; contratos distintos de cálculo/pedido passaram |
+| Transições | CA05/08; CT05/10 | #3, #4, #5 | Remoção/reaplicação passaram; CT10 falhou no estado de R$ 200 e recuperou valores ao voltar para uma unidade |
+| Quantidade e centavos | CA10/11; CT11/12/13 | #2, #3, #4, #5 | UI respeita cinco; API aceita seis (BUG-002); valores de centavos conferem |
+| Checkout e contratos | CT14/15/16/17 | #3, #4, #5 | Executados; checkout confirma valor incorreto do BUG-001; validações e contratos auxiliares passaram |
+| Exploração e entrega | EXP01/02 e checklist | #3, #4, #6 | Exploração assistida, relatório, guia e clone limpo concluídos; publicação pública e envio pendentes |
 
-Cupons, transições e quantidade podem ser trabalhados independentemente; checkout usa o preparo do carrinho. A revisão final depende dos resultados de todos. Cada slice só termina com resultados e limitações registrados; um bug do produto não impede concluir sua investigação.
+Cupons, transições e quantidade podem ser trabalhados independentemente; checkout usa o preparo do carrinho. Um slice pode terminar com um bug aberto, desde que sua execução, impacto e limitações estejam registrados. As issues de QA não são as issues de correção do produto.
+
+## Estado consolidado
+
+69 testes na rodada completa: 61 passaram, oito falharam por dois bugs. [Rodada final](rodada-final.md), [exploração](exploracao.md) e [relatório](relatorio-final.md). Todos os CT01–CT20 possuem variantes executadas. Defeitos abertos: [#7](https://github.com/bsampp/verzel-qa/issues/7) e [#8](https://github.com/bsampp/verzel-qa/issues/8).
+
+As tarefas #2, #3, #4 e #5 tiveram os entregáveis técnicos concluídos. #1 mantém a pendência de confirmar a data/hora de recebimento; #6 mantém publicação pública, revisão humana e envio. A data do prazo não é inferida a partir da data dos commits.

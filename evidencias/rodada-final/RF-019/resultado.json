@@ -1,0 +1,18 @@
+{
+  "id": "RF-019",
+  "cenario": "CT02",
+  "titulo": "CT02-minúsculas API cupom \"bemvindo10\" em /api/pedidos",
+  "arquivo": "contratos.api.spec.ts",
+  "linha": 16,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:13:27.973Z",
+  "duracaoMs": 125,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "resposta-api",
+      "arquivo": "RF-019/resposta-api-0.json"
+    }
+  ]
+}

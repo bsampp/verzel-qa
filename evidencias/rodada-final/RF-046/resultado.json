@@ -1,0 +1,22 @@
+{
+  "id": "RF-046",
+  "cenario": "CT01",
+  "titulo": "CT01 — aplicar cupom válido com uma mochila",
+  "arquivo": "cupons.spec.ts",
+  "linha": 12,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:13:32.740Z",
+  "duracaoMs": 1293,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "calculo-carrinho",
+      "arquivo": "RF-046/calculo-carrinho-0.json"
+    },
+    {
+      "nome": "carrinho",
+      "arquivo": "RF-046/carrinho-1.png"
+    }
+  ]
+}

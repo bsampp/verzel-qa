@@ -1,0 +1,26 @@
+{
+  "id": "RF-065",
+  "cenario": "CT07",
+  "titulo": "CT07 API — subtotal 200, sem cupom",
+  "arquivo": "frete.api.spec.ts",
+  "linha": 15,
+  "estado": "failed",
+  "inicio": "2026-10-20T16:14:30.188Z",
+  "duracaoMs": 140,
+  "bug": "BUG-001",
+  "erros": [
+    "Error: frete\n\nexpect(received).toBe(expected) // Object.is equality\n\nExpected: 0\nReceived: 19.9\n\n  33 |     expect.soft(corpo.subtotal, 'subtotal').toBe(caso.subtotal);\n  34 |     expect.soft(corpo.desconto, 'desconto').toBe(caso.desconto);\n> 35 |     expect.soft(corpo.frete, 'frete').toBe(caso.frete);\n     |                                       ^\n  36 |     expect.soft(corpo.total, 'total').toBe(caso.total);\n  37 |     expect.soft(corpo.freteGratis, 'freteGratis').toBe(caso.frete === 0);\n  38 |     expect.soft(corpo.valorFaltanteFreteGratis, 'faltante').toBe(caso.faltante);\n    at /home/bsampp/projects/verzel-qa/tests/frete.api.spec.ts:35:39",
+    "Error: total\n\nexpect(received).toBe(expected) // Object.is equality\n\nExpected: 200\nReceived: 219.9\n\n  34 |     expect.soft(corpo.desconto, 'desconto').toBe(caso.desconto);\n  35 |     expect.soft(corpo.frete, 'frete').toBe(caso.frete);\n> 36 |     expect.soft(corpo.total, 'total').toBe(caso.total);\n     |                                       ^\n  37 |     expect.soft(corpo.freteGratis, 'freteGratis').toBe(caso.frete === 0);\n  38 |     expect.soft(corpo.valorFaltanteFreteGratis, 'faltante').toBe(caso.faltante);\n  39 |   });\n    at /home/bsampp/projects/verzel-qa/tests/frete.api.spec.ts:36:39",
+    "Error: freteGratis\n\nexpect(received).toBe(expected) // Object.is equality\n\nExpected: true\nReceived: false\n\n  35 |     expect.soft(corpo.frete, 'frete').toBe(caso.frete);\n  36 |     expect.soft(corpo.total, 'total').toBe(caso.total);\n> 37 |     expect.soft(corpo.freteGratis, 'freteGratis').toBe(caso.frete === 0);\n     |                                                   ^\n  38 |     expect.soft(corpo.valorFaltanteFreteGratis, 'faltante').toBe(caso.faltante);\n  39 |   });\n  40 | }\n    at /home/bsampp/projects/verzel-qa/tests/frete.api.spec.ts:37:51"
+  ],
+  "evidencias": [
+    {
+      "nome": "calculo-carrinho",
+      "arquivo": "RF-065/calculo-carrinho-0.json"
+    },
+    {
+      "nome": "error-context",
+      "arquivo": "RF-065/error-context-1.md"
+    }
+  ]
+}

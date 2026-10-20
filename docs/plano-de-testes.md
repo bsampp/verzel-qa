@@ -42,3 +42,7 @@ Não interpretar esses dias como datas fixas: contar a partir do recebimento rea
 ## Conclusão
 
 Cada cenário deve ter resultado real e evidência ou motivo para bloqueio/não execução. Bugs confirmados devem ser reproduzíveis. A suíte deve ter comando verificável e pelo menos 3 cenários executados; falhas de produto permanecem reportadas e não devem ser mascaradas para obter verde. A entrega pode conter bugs abertos com recomendação justificada de não aprovação. Documentar cobertura e limitações restantes.
+
+## Execução efetiva
+
+O cronograma acima preserva o planejamento inicial, não um compromisso de datas. O trabalho foi realizado como laboratório com estudo entre 18 e 20/10/2026. Em 20/10, a suíte completa e o clone limpo reproduziram 61 aprovações e 8 reprovações por dois defeitos. Duas explorações dirigidas curtas foram executadas; a duração sugerida de 20 minutos por sessão não foi cumprida e não é apresentada como tempo real. Ver [relatório final](relatorio-final.md), [exploração](exploracao.md) e [verificação](verificacao-entrega.md).

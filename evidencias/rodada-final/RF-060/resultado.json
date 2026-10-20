@@ -1,0 +1,22 @@
+{
+  "id": "RF-060",
+  "cenario": "CT16",
+  "titulo": "CT16 UI — nome sem sobrenome",
+  "arquivo": "fluxos.spec.ts",
+  "linha": 130,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:14:25.098Z",
+  "duracaoMs": 1613,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "tela",
+      "arquivo": "RF-060/tela-0.png"
+    },
+    {
+      "nome": "conteudo",
+      "arquivo": "RF-060/conteudo-1.json"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "coletadoEm": "2026-10-20T16:13:27.256Z",
+  "url": "https://verzel-store.qa-test-verzel-store.workers.dev/api/carrinho/calcular",
+  "status": 422,
+  "requisicao": {
+    "metodo": "POST",
+    "payload": {
+      "cliente": {
+        "nome": "Maria Silva",
+        "email": "maria@example.com",
+        "cep": "01310-100"
+      },
+      "itens": [
+        {
+          "produtoId": "P005",
+          "quantidade": 1
+        },
+        {
+          "produtoId": "P005",
+          "quantidade": 1
+        }
+      ]
+    }
+  },
+  "resposta": {
+    "erro": {
+      "codigo": "ITEM_DUPLICADO",
+      "mensagem": "O produto P005 aparece mais de uma vez.",
+      "campo": "itens[1].produtoId"
+    }
+  }
+}

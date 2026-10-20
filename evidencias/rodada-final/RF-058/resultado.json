@@ -1,0 +1,26 @@
+{
+  "id": "RF-058",
+  "cenario": "CT14",
+  "titulo": "CT14 — confirmar pedido de 1 mochila(s) com cupom",
+  "arquivo": "fluxos.spec.ts",
+  "linha": 103,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:14:15.540Z",
+  "duracaoMs": 1416,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "resposta-api",
+      "arquivo": "RF-058/resposta-api-0.json"
+    },
+    {
+      "nome": "tela",
+      "arquivo": "RF-058/tela-1.png"
+    },
+    {
+      "nome": "conteudo",
+      "arquivo": "RF-058/conteudo-2.json"
+    }
+  ]
+}

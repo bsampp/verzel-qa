@@ -1,0 +1,24 @@
+{
+  "id": "RF-008",
+  "cenario": "CT12",
+  "titulo": "CT12 API quantidade 6 em /api/carrinho/calcular",
+  "arquivo": "contratos.api.spec.ts",
+  "linha": 34,
+  "estado": "failed",
+  "inicio": "2026-10-20T16:13:25.444Z",
+  "duracaoMs": 118,
+  "bug": "BUG-002",
+  "erros": [
+    "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 422\nReceived: 200\n\n  36 |       const resposta = await request.post(rota, { data: payload });\n  37 |       const corpo = await registrarResposta(resposta, { metodo: 'POST', payload }, info);\n> 38 |       expect(resposta.status()).toBe(quantidade === 6 ? 422 : rota === '/api/pedidos' ? 201 : 200);\n     |                                 ^\n  39 |       if (quantidade === 6) expect(corpo.erro.codigo).toBe('QUANTIDADE_MAXIMA_EXCEDIDA');\n  40 |       else expect(corpo.itens[0].quantidade).toBe(5);\n  41 |     });\n    at /home/bsampp/projects/verzel-qa/tests/contratos.api.spec.ts:38:33"
+  ],
+  "evidencias": [
+    {
+      "nome": "resposta-api",
+      "arquivo": "RF-008/resposta-api-0.json"
+    },
+    {
+      "nome": "error-context",
+      "arquivo": "RF-008/error-context-1.md"
+    }
+  ]
+}

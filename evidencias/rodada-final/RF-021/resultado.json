@@ -1,0 +1,18 @@
+{
+  "id": "RF-021",
+  "cenario": "CT03",
+  "titulo": "CT03 API cupom \"INEXISTENTE\" em /api/pedidos",
+  "arquivo": "contratos.api.spec.ts",
+  "linha": 16,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:13:28.233Z",
+  "duracaoMs": 121,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "resposta-api",
+      "arquivo": "RF-021/resposta-api-0.json"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "RF-043",
+  "cenario": "CT17",
+  "titulo": "CT17 API método não permitido",
+  "arquivo": "contratos.api.spec.ts",
+  "linha": 91,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:13:32.317Z",
+  "duracaoMs": 110,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "resposta-api",
+      "arquivo": "RF-043/resposta-api-0.json"
+    }
+  ]
+}

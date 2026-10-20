@@ -1,0 +1,20 @@
+{
+  "commitValidado": "22c849d3fae1e9d1a181cd939ae51702c637bb34",
+  "origem": "clone local via git clone --no-local, sem node_modules ou artefatos do workspace",
+  "comandos": {
+    "npm ci": 0,
+    "npm run typecheck": 0,
+    "npx playwright install chromium": 0,
+    "npm test": 1
+  },
+  "estatisticas": {
+    "startTime": "2026-10-20T16:17:40.889Z",
+    "duration": 88459.109,
+    "expected": 61,
+    "skipped": 0,
+    "unexpected": 8,
+    "flaky": 0
+  },
+  "mesmosResultadosPorTeste": true,
+  "observacao": "Falhas de produto idênticas às da rodada final. Documentação consolidada foi escrita depois, sem alterar os testes."
+}

@@ -1,0 +1,33 @@
+{
+  "id": "RF-056",
+  "cenario": "CT07",
+  "titulo": "CT07 UI — fronteira de frete sem cupom",
+  "arquivo": "fluxos.spec.ts",
+  "linha": 91,
+  "estado": "failed",
+  "inicio": "2026-10-20T16:14:00.976Z",
+  "duracaoMs": 11686,
+  "bug": "BUG-001",
+  "erros": [
+    "Error: expect(locator).toHaveText(expected) failed\n\nLocator: locator('[data-valor=\"frete\"]')\nExpected pattern: /^(Grátis|R\\$\\s0,00)$/i\nReceived string:  \"R$ 19,90\"\nTimeout: 5000ms\n\nCall log:\n  - Expect \"soft toHaveText\" locator('[data-valor=\"frete\"]') with timeout 5000ms\n  - waiting for locator('[data-valor=\"frete\"]')\n    14 × locator resolved to <dd data-valor=\"frete\">R$ 19,90</dd>\n       - unexpected value \"R$ 19,90\"\n\n\n  94 |     await page.getByRole('link', { name: /Carrinho/ }).click();\n  95 |     await expect(page.locator('[data-valor=\"subtotal\"]')).toHaveText(caso.subtotal);\n> 96 |     await expect.soft(page.locator('[data-valor=\"frete\"]')).toHaveText(caso.frete);\n     |                                                             ^\n  97 |     await expect.soft(page.locator('[data-valor=\"total\"]')).toHaveText(caso.total);\n  98 |     if (caso.faltante) await expect(page.getByText(caso.faltante, { exact: true })).toBeVisible();\n  99 |   });\n    at /home/bsampp/projects/verzel-qa/tests/fluxos.spec.ts:96:61",
+    "Error: expect(locator).toHaveText(expected) failed\n\nLocator:  locator('[data-valor=\"total\"]')\nExpected: \"R$ 200,00\"\nReceived: \"R$ 219,90\"\nTimeout:  5000ms\n\nCall log:\n  - Expect \"soft toHaveText\" locator('[data-valor=\"total\"]') with timeout 5000ms\n  - waiting for locator('[data-valor=\"total\"]')\n    14 × locator resolved to <dd data-valor=\"total\">R$ 219,90</dd>\n       - unexpected value \"R$ 219,90\"\n\n\n   95 |     await expect(page.locator('[data-valor=\"subtotal\"]')).toHaveText(caso.subtotal);\n   96 |     await expect.soft(page.locator('[data-valor=\"frete\"]')).toHaveText(caso.frete);\n>  97 |     await expect.soft(page.locator('[data-valor=\"total\"]')).toHaveText(caso.total);\n      |                                                             ^\n   98 |     if (caso.faltante) await expect(page.getByText(caso.faltante, { exact: true })).toBeVisible();\n   99 |   });\n  100 | }\n    at /home/bsampp/projects/verzel-qa/tests/fluxos.spec.ts:97:61"
+  ],
+  "evidencias": [
+    {
+      "nome": "screenshot",
+      "arquivo": "RF-056/screenshot-0.png"
+    },
+    {
+      "nome": "tela",
+      "arquivo": "RF-056/tela-1.png"
+    },
+    {
+      "nome": "conteudo",
+      "arquivo": "RF-056/conteudo-2.json"
+    },
+    {
+      "nome": "error-context",
+      "arquivo": "RF-056/error-context-3.md"
+    }
+  ]
+}

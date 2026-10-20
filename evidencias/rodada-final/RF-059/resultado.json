@@ -1,0 +1,37 @@
+{
+  "id": "RF-059",
+  "cenario": "CT14",
+  "titulo": "CT14 — confirmar pedido de 2 mochila(s) com cupom",
+  "arquivo": "fluxos.spec.ts",
+  "linha": 103,
+  "estado": "failed",
+  "inicio": "2026-10-20T16:14:16.978Z",
+  "duracaoMs": 6818,
+  "bug": "BUG-001",
+  "erros": [
+    "Error: expect(received).toMatchObject(expected)\n\n- Expected  - 2\n+ Received  + 2\n\n  Object {\n    \"desconto\": 20,\n-   \"frete\": 0,\n+   \"frete\": 19.9,\n    \"subtotal\": 200,\n-   \"total\": 180,\n+   \"total\": 199.9,\n  }\n\n  117 |     expect(corpo.numero).toMatch(/^VZ-\\d{6}$/);\n  118 |     const esperado = quantidade === 1 ? { subtotal: 100, desconto: 10, frete: 19.9, total: 109.9 } : { subtotal: 200, desconto: 20, frete: 0, total: 180 };\n> 119 |     expect.soft(corpo).toMatchObject(esperado);\n      |                        ^\n  120 |     await expect(page.getByText(corpo.numero, { exact: false })).toBeVisible();\n  121 |     await expect.soft(page.locator('[data-valor=\"total\"]')).toHaveText(quantidade === 1 ? 'R$ 109,90' : 'R$ 180,00');\n  122 |   });\n    at /home/bsampp/projects/verzel-qa/tests/fluxos.spec.ts:119:24",
+    "Error: expect(locator).toHaveText(expected) failed\n\nLocator:  locator('[data-valor=\"total\"]')\nExpected: \"R$ 180,00\"\nReceived: \"R$ 199,90\"\nTimeout:  5000ms\n\nCall log:\n  - Expect \"soft toHaveText\" locator('[data-valor=\"total\"]') with timeout 5000ms\n  - waiting for locator('[data-valor=\"total\"]')\n    14 × locator resolved to <dd data-valor=\"total\">R$ 199,90</dd>\n       - unexpected value \"R$ 199,90\"\n\n\n  119 |     expect.soft(corpo).toMatchObject(esperado);\n  120 |     await expect(page.getByText(corpo.numero, { exact: false })).toBeVisible();\n> 121 |     await expect.soft(page.locator('[data-valor=\"total\"]')).toHaveText(quantidade === 1 ? 'R$ 109,90' : 'R$ 180,00');\n      |                                                             ^\n  122 |   });\n  123 | }\n  124 |\n    at /home/bsampp/projects/verzel-qa/tests/fluxos.spec.ts:121:61"
+  ],
+  "evidencias": [
+    {
+      "nome": "resposta-api",
+      "arquivo": "RF-059/resposta-api-0.json"
+    },
+    {
+      "nome": "screenshot",
+      "arquivo": "RF-059/screenshot-1.png"
+    },
+    {
+      "nome": "tela",
+      "arquivo": "RF-059/tela-2.png"
+    },
+    {
+      "nome": "conteudo",
+      "arquivo": "RF-059/conteudo-3.json"
+    },
+    {
+      "nome": "error-context",
+      "arquivo": "RF-059/error-context-4.md"
+    }
+  ]
+}

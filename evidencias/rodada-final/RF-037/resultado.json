@@ -1,0 +1,18 @@
+{
+  "id": "RF-037",
+  "cenario": "CT16",
+  "titulo": "CT16 API CEP com hífen",
+  "arquivo": "contratos.api.spec.ts",
+  "linha": 70,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:13:31.535Z",
+  "duracaoMs": 109,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "resposta-api",
+      "arquivo": "RF-037/resposta-api-0.json"
+    }
+  ]
+}

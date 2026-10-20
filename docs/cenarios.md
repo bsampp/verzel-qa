@@ -1,6 +1,8 @@
 # Cenários propostos
 
-UI: CT01 e CT03 **passaram**; CT09 **falhou**. CT03/pedido API ainda pendente. API: CT06/CT18/CT08/CT19/CT20 passaram; CT07/CT09 falharam. Ver EX-001 a EX-010 e BUG-001. Demais cenários/camadas **não executados**. Cada linha com múltiplas variantes exige registro individual por variante na execução. Começar com aba/contexto limpo; montar carrinho na UI ou enviar payload explícito na API; executar a ação e comparar cada valor/mensagem com o esperado.
+Planejamento final: 20 cenários, com variantes individualizadas em 69 testes executáveis. Todos têm ao menos uma execução; as camadas abaixo indicam o escopo implementado, não aprovação. [Resultados por variante](rodada-final.md), [exploração assistida](exploracao.md). CT07/09/10/14 falharam por BUG-001; CT12 falhou nas variantes de seis unidades por BUG-002. CT12 com cinco passou. Demais variantes automatizadas passaram.
+
+Cada teste começa com contexto limpo ou payload explícito; resultados esperados são independentes da API. A numeração CT é nossa, CA vem da documentação da Verzel.
 
 | ID | Referência | Prioridade | Camada | Dados e ação | Resultado esperado |
 | --- | --- | --- | --- | --- | --- |
@@ -13,7 +15,7 @@ UI: CT01 e CT03 **passaram**; CT09 **falhou**. CT03/pedido API ainda pendente. A
 | CT07 | CA06 | P0 | UI + API | P005 × 2, sem cupom | Subtotal 200,00; frete 0; faltante 0; total 200,00. |
 | CT08 | CA06 | P0 | UI + API | P007 × 1, sem cupom | Subtotal 229,90; frete 0; faltante 0; total 229,90. |
 | CT09 | CA01, CA06, CA08 | P0 | UI + API | P005 × 2, BEMVINDO10 | Subtotal 200,00; desconto 20,00; frete 0; total 180,00. Frete continua grátis mesmo com total inferior a 200. |
-| CT10 | CA01, CA07, CA08 | P0 | UI + API | P005 com BEMVINDO10; alterar quantidade de 1 para 2 e voltar a 1 | Totais 109,90 → 180,00 → 109,90; frete 19,90 → 0 → 19,90 e desconto recalculado. |
+| CT10 | CA01, CA07, CA08 | P0 | UI | P005 com BEMVINDO10; alterar quantidade de 1 para 2 e voltar a 1 | Totais 109,90 → 180,00 → 109,90; frete 19,90 → 0 → 19,90 e desconto recalculado. |
 | CT11 | CA10 | P1 | UI | P006; adicionar até 5 e tentar sexta unidade pela interface | Quantidade chega a 5; UI impede ultrapassar limite no catálogo e carrinho; redução para 4 permite voltar a 5. |
 | CT12 | CA10 | P1 | API | P006 com quantidades 5 e 6, em chamadas separadas de cálculo e pedido com cliente válido | 5 aceito: cálculo 200/pedido 201. 6 rejeitado com 422/QUANTIDADE_MAXIMA_EXCEDIDA em ambos. |
 | CT13 | CA11, CA01 | P0 | UI + API | P002 × 1 + P004 × 2, BEMVINDO10 | Subtotal 239,70; desconto 23,97; frete 0; total 215,73. UI com duas casas e API com valores numéricos equivalentes. |
@@ -27,7 +29,7 @@ UI: CT01 e CT03 **passaram**; CT09 **falhou**. CT03/pedido API ainda pendente. A
 
 CT18 e CT19 foram acrescentados na investigação para explicitar as variantes com cupom abaixo e acima do limite.
 
-## Exemplo em Gherkin (não executável nesta etapa)
+## Exemplo em Gherkin (documentação; implementação em Playwright/TypeScript)
 
 ```gherkin
 # language: pt
@@ -47,3 +49,7 @@ Funcionalidade: Frete grátis com cupom
 CA01: CT01/09/13/18/19/20; CA02: CT02; CA03: CT03; CA04: CT04; CA05: CT05; CA06: CT07/08/09/19/20; CA07: CT01/06/10/18; CA08: CT09/10/19/20; CA09: CT01/14/18; CA10: CT11/12; CA11: CT13.
 
 Para variantes de contrato, montar payload com apenas uma invalidez por vez. Em CT03/04, a tentativa de pedido inválido deve ser feita diretamente na API, sem presumir que a UI permite manter o cupom rejeitado.
+
+## Ajustes de execução
+
+CT10 é executado na UI: a API é stateless e recebe um carrinho completo por chamada; os estados de uma e duas mochilas são cobertos separadamente na API por CT01 e CT09. CT14 verifica o pedido na UI e faz asserts independentes da resposta real de POST /pedidos capturada no fluxo. CT16 testa as invalidações na UI/API e os dois formatos válidos de CEP na API; o formato sem hífen também foi confirmado em EXP02. CT17 usa GET /api/inexistente, POST /api/produtos e JSON malformado no cálculo. CT20 verifica subtotal acima de 200 com valor após desconto abaixo de 200.

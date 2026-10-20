@@ -1,0 +1,18 @@
+{
+  "id": "RF-016",
+  "cenario": "CT15",
+  "titulo": "CT15 API quantidade 1.5 em /api/carrinho/calcular",
+  "arquivo": "contratos.api.spec.ts",
+  "linha": 53,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:13:27.566Z",
+  "duracaoMs": 108,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "resposta-api",
+      "arquivo": "RF-016/resposta-api-0.json"
+    }
+  ]
+}

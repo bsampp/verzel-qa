@@ -1,5 +1,7 @@
 # Documento de evidências
 
+**Consolidado final:** [69 resultados por variante](rodada-final.md), [resumo JSON](../evidencias/rodada-final/resultados.json) e [execução manual/exploratória](exploracao.md). Cada RF possui `resultado.json` com estado, erros e caminhos relativos para os anexos. Screenshots de sucesso e falha e respostas reais foram preservados, sem traces volumosos. Os artefatos abaixo mantêm o histórico inicial.
+
 Primeira evidência coletada em EX-001 (CT09), reprodução automatizada da divergência observada pela pessoa candidata.
 
 Guardar arquivos em `evidencias/CTxx/`, por exemplo `EX-001-desconto.png` e `EX-001-calculo.json`. Usar dados sintéticos. As evidências selecionadas devem ser versionadas; diretórios temporários do Playwright ficam ignorados. Copiar artefatos relevantes antes da limpeza e conferir seus links.

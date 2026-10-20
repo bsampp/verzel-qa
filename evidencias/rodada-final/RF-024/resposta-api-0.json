@@ -1,0 +1,46 @@
+{
+  "coletadoEm": "2026-10-20T16:13:28.683Z",
+  "url": "https://verzel-store.qa-test-verzel-store.workers.dev/api/pedidos",
+  "status": 201,
+  "requisicao": {
+    "metodo": "POST",
+    "payload": {
+      "cliente": {
+        "nome": "Maria Silva",
+        "email": "maria@example.com",
+        "cep": "01310-100"
+      },
+      "itens": [
+        {
+          "produtoId": "P006",
+          "quantidade": 6
+        }
+      ]
+    }
+  },
+  "resposta": {
+    "numero": "VZ-383198",
+    "criadoEm": "2026-10-20T16:13:28.675Z",
+    "cliente": {
+      "nome": "Maria Silva",
+      "email": "maria@example.com",
+      "cep": "01310100"
+    },
+    "itens": [
+      {
+        "produtoId": "P006",
+        "nome": "Kit 3 Pares de Meias",
+        "precoUnitario": 29.9,
+        "quantidade": 6,
+        "total": 179.4
+      }
+    ],
+    "subtotal": 179.4,
+    "desconto": 0,
+    "frete": 19.9,
+    "freteGratis": false,
+    "valorFaltanteFreteGratis": 20.6,
+    "total": 199.3,
+    "cupom": null
+  }
+}

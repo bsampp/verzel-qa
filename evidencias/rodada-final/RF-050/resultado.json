@@ -1,0 +1,22 @@
+{
+  "id": "RF-050",
+  "cenario": "CT04",
+  "titulo": "CT04 — rejeitar cupom expirado com uma mochila",
+  "arquivo": "cupons.spec.ts",
+  "linha": 12,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:13:38.118Z",
+  "duracaoMs": 1272,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "calculo-carrinho",
+      "arquivo": "RF-050/calculo-carrinho-0.json"
+    },
+    {
+      "nome": "carrinho",
+      "arquivo": "RF-050/carrinho-1.png"
+    }
+  ]
+}

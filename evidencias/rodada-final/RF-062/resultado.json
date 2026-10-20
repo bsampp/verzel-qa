@@ -1,0 +1,22 @@
+{
+  "id": "RF-062",
+  "cenario": "CT16",
+  "titulo": "CT16 UI — CEP curto",
+  "arquivo": "fluxos.spec.ts",
+  "linha": 130,
+  "estado": "passed",
+  "inicio": "2026-10-20T16:14:28.113Z",
+  "duracaoMs": 1607,
+  "bug": null,
+  "erros": [],
+  "evidencias": [
+    {
+      "nome": "tela",
+      "arquivo": "RF-062/tela-0.png"
+    },
+    {
+      "nome": "conteudo",
+      "arquivo": "RF-062/conteudo-1.json"
+    }
+  ]
+}
