@@ -32,4 +32,4 @@ Cupons, transições e quantidade podem ser trabalhados independentemente; check
 
 69 testes na rodada completa: 61 passaram, oito falharam por dois bugs. [Rodada final](rodada-final.md), [exploração](exploracao.md) e [relatório](relatorio-final.md). Todos os CT01–CT20 possuem variantes executadas. Defeitos abertos: [#7](https://github.com/bsampp/verzel-qa/issues/7) e [#8](https://github.com/bsampp/verzel-qa/issues/8).
 
-As tarefas #2, #3, #4 e #5 tiveram os entregáveis técnicos concluídos. #1 mantém a pendência de confirmar a data/hora de recebimento; #6 mantém publicação pública, revisão humana e envio. A data do prazo não é inferida a partir da data dos commits.
+As tarefas #1 a #5 tiveram os entregáveis concluídos. A pessoa candidata confirmou recebimento em 15/10/2026 e último dia de envio em 20/10/2026, sem informar horário limite. #6 mantém publicação pública, revisão humana e envio. A data do prazo foi informada pela pessoa candidata, não inferida dos commits.

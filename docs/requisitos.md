@@ -70,3 +70,7 @@ Erros documentados: 400 JSON_INVALIDO; 404 ROTA_NAO_ENCONTRADA e PRODUTO_NAO_ENC
 | DEC03 | Meio centavo no arredondamento | Não assumir modo de desempate não especificado; registrar ambiguidade se relevante | CA11 |
 
 Novas ambiguidades: registrar referência, interpretação, justificativa e impacto antes de seguir.
+
+## Prazo confirmado
+
+A pessoa candidata informou em 20/10/2026 que recebeu o PDF em 15/10/2026 e que 20/10/2026 é o último dia de envio. O enunciado prevê cinco dias corridos. Horário limite não informado; não assumir 23:59 nem um fuso de corte específico.

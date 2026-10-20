@@ -24,7 +24,7 @@ Dados de cliente são sintéticos. O conteúdo do projeto foi conferido antes da
 ## Pendências administrativas
 
 - Repositório ainda privado; o PDF exige que seja público antes do envio.
-- Data/hora exata de recebimento do enunciado não fornecida; confirmar o prazo real.
+- Prazo confirmado pela pessoa candidata: PDF recebido em 15/10/2026; último dia de envio em 20/10/2026. Horário limite não informado.
 - Revisão humana e envio pelo formulário: https://elitedev.verzel.com.br/.
 - Informar no formulário o uso de IA. O registro de apoio atualizado permanece local.
 

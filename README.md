@@ -71,4 +71,4 @@ Sem acesso ao código da loja, não foram implementados testes unitários da apl
 
 ## Envio
 
-O enunciado exige **um repositório público** e envio pelo formulário https://elitedev.verzel.com.br/, sem deploy. A preparação técnica está concluída; a publicação pública e o envio são etapas finais a confirmar. O prazo formal é de cinco dias corridos após o recebimento do PDF; a data/hora de recebimento não foi fornecida, portanto não afirmamos cumprimento do prazo. Informar honestamente no formulário onde e como houve uso de IA. Revisão humana recomendada antes da apresentação.
+O enunciado exige **um repositório público** e envio pelo formulário https://elitedev.verzel.com.br/, sem deploy. A preparação técnica está concluída; a publicação pública e o envio são etapas finais a confirmar. Recebimento do PDF: **15/10/2026**. A pessoa candidata confirmou **20/10/2026 como último dia para envio**, conforme o prazo de cinco dias corridos do enunciado. O horário limite não foi informado. Informar honestamente no formulário onde e como houve uso de IA. Revisão humana recomendada antes da apresentação.
