@@ -83,7 +83,7 @@ As sessões foram operadas pelo agente através do navegador e têm duração cu
 
 ## Como organizamos slices e issues
 
-Inspirados no conceito de slices verificáveis de Matt Pocock, cada slice atravessa regra, cenário, execução, evidência e resultado. Não separamos em tarefas gigantes de “escrever todos os testes” e “coletar todas as evidências”. Os seis tickets existentes acompanham o progresso, e defeitos têm issues próprias. A aplicação da ideia foi adaptada a QA; não instalamos nem executamos o conjunto completo de skills.
+Inspirados no conceito de slices verificáveis de Matt Pocock, cada slice atravessa regra, cenário, execução, evidência e resultado. Não separamos em tarefas gigantes de “escrever todos os testes” e “coletar todas as evidências”. Os seis tickets existentes acompanham o progresso, e defeitos têm issues próprias. A aplicação da ideia foi adaptada a QA. Em 21/10, o setup de `setup-matt-pocock-skills` foi gravado em AGENTS.md e docs/agents, com GitHub Issues como tracker. Não instalamos nem executamos o conjunto inteiro de skills.
 
 Um slice pode terminar com falhas reais registradas. Corrigir a loja pertence ao time responsável pela aplicação; nossa responsabilidade é produzir um diagnóstico reproduzível.
 
@@ -103,3 +103,5 @@ Não copie esta quantidade de testes ou a estrutura de IDs automaticamente. Adap
 - Como você provaria que uma correção resolveu o problema sem causar regressão?
 
 Para estudar executando: rode `npm run typecheck`, depois um arquivo por vez, e abra `npm run test:report`. Leia a expectativa que falhou, veja o anexo e tente explicar a divergência com suas palavras.
+
+Para Gherkin, leia [como usar](gherkin.md) junto aos [20 cenários](cenarios.feature). Para saber o que está entregue, use a [checklist do PDF](checklist-entrega.md), que separa execução técnica, limitações e envio.

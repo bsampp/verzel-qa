@@ -29,7 +29,11 @@ Cada teste começa com contexto limpo ou payload explícito; resultados esperado
 
 CT18 e CT19 foram acrescentados na investigação para explicitar as variantes com cupom abaixo e acima do limite.
 
-## Exemplo em Gherkin (documentação; implementação em Playwright/TypeScript)
+## Gherkin
+
+Os [20 cenários em Gherkin](cenarios.feature) usam as mesmas regras e IDs. [Guia de uso](gherkin.md) explica Dado/Quando/Então e a diferença entre documentação .feature e testes executáveis Playwright. O exemplo abaixo resume CT09.
+
+### Exemplo (documentação; implementação em Playwright/TypeScript)
 
 ```gherkin
 # language: pt

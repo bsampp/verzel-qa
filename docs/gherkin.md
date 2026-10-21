@@ -113,7 +113,7 @@ test('CT09 — manter frete grátis com subtotal de R$ 200 e cupom de 10%', asyn
 ```
 
 A versão pela API está em
-[`tests/frete.api.spec.ts`](../tests/frete.api.spec.ts:8): ela envia o carrinho
+[`tests/frete.api.spec.ts`](../tests/frete.api.spec.ts#L8): ela envia o carrinho
 para `POST /api/carrinho/calcular` e compara os números esperados. O `.feature`
 não escolhe uma única camada; ele documenta a regra que vale para UI e API.
 

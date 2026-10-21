@@ -10,15 +10,17 @@ Avaliação da entrega **VZS-142: cupom de desconto e frete grátis**, documenta
 | --- | --- |
 | Plano e escopo | [Plano de testes](docs/plano-de-testes.md) |
 | Regras, dados e interpretações | [Requisitos](docs/requisitos.md) |
-| 20 cenários e rastreabilidade | [Cenários](docs/cenarios.md) |
+| 20 cenários e rastreabilidade | [Tabela](docs/cenarios.md), [Gherkin](docs/cenarios.feature), [como ler e usar](docs/gherkin.md) |
 | Execução por variante | [Rodada final: 69 resultados](docs/rodada-final.md) |
-| Execução manual e exploração | [Duas sessões dirigidas](docs/exploracao.md) |
+| Execução manual assistida e exploração | [Duas sessões operadas pelo agente](docs/exploracao.md) |
 | Bugs e evidências | [Índice dos dois bugs](docs/bugs/README.md), [evidências](docs/evidencias.md) |
 | Conclusão e limites | [Relatório final](docs/relatorio-final.md) |
 | Automação | [Testes Playwright](tests/) e [configuração](playwright.config.ts) |
 | Histórico de execução | [Execuções incrementais](docs/execucao.md) |
 | Organização e issues | [Backlog e slices](docs/backlog.md), [GitHub Issues](https://github.com/bsampp/verzel-qa/issues) |
 | Material de estudo | [Guia comentado](docs/guia-estudo.md) |
+| Checklist do PDF | [Exigência por exigência e pendências](docs/checklist-entrega.md) |
+| Revisão independente de agentes | [Conferência e reprodução em 21/10](docs/revisoes/README.md) |
 
 ## Executar
 

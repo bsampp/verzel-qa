@@ -1,6 +1,6 @@
 # Backlog inicial
 
-As seis issues foram criadas no GitHub e estão abertas. Trabalhar em pequenos commits por tarefa.
+As seis issues foram criadas no GitHub. As tarefas #1–#5 foram concluídas; #6 acompanha a preparação e revisão final. Trabalhar em pequenos commits por tarefa.
 
 | ID | Issue | Dependências |
 | --- | --- | --- |
@@ -15,7 +15,7 @@ Fluxo: A fazer → Em andamento → Em revisão → Concluído. Relatos de defei
 
 ## Execução em slices
 
-Aplicamos a ideia de slices verificáveis da skill `to-tickets` de Matt Pocock: regra → cenário → execução → evidência → resultado. As seis issues existentes continuam sendo o tracker; não criamos tickets duplicados. Não foi executado o setup completo do conjunto de skills.
+Aplicamos a ideia de slices verificáveis da skill `to-tickets` de Matt Pocock: regra → cenário → execução → evidência → resultado. As seis issues existentes continuam sendo o tracker; não criamos tickets duplicados. O setup de `setup-matt-pocock-skills` foi gravado em AGENTS.md e docs/agents em 21/10/2026, com GitHub como tracker canônico e contexto único. Não há skill triage instalada.
 
 | Slice | Critérios/cenários | Issues | Resultado final |
 | --- | --- | --- | --- |
@@ -33,3 +33,7 @@ Cupons, transições e quantidade podem ser trabalhados independentemente; check
 69 testes na rodada completa: 61 passaram, oito falharam por dois bugs. [Rodada final](rodada-final.md), [exploração](exploracao.md) e [relatório](relatorio-final.md). Todos os CT01–CT20 possuem variantes executadas. Defeitos abertos: [#7](https://github.com/bsampp/verzel-qa/issues/7) e [#8](https://github.com/bsampp/verzel-qa/issues/8).
 
 As tarefas #1 a #5 tiveram os entregáveis concluídos. A pessoa candidata confirmou recebimento em 15/10/2026 e último dia de envio em 20/10/2026, sem informar horário limite. #6 mantém publicação pública, revisão humana e envio. A data do prazo foi informada pela pessoa candidata, não inferida dos commits.
+
+## Revisão complementar de 21/10
+
+Setup Matt Pocock executado, tracker GitHub configurado, dois scouts DeepSeek concluídos, Gherkin CT01–CT20 finalizado e validado. [Checklist dos seis itens](checklist-entrega.md) e [relatórios independentes](revisoes/README.md). Sem mudança nos testes ou na rodada histórica. Pendências de visibilidade/formulário e de compreensão/revisão humana continuam explícitas.

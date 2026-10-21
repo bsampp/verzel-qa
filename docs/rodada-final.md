@@ -4,7 +4,7 @@ Início: 2026-10-20T16:13:10.570Z (UTC). Comando: `npm test`. Duração: 82.25 s
 
 **69 testes: 61 passaram, 8 falharam, 0 ignorados e 0 flaky.** 18 pelo navegador e 51 pela API. As falhas correspondem a BUG-001 (6) e BUG-002 (2). Não foram usados retries, mocks, skips ou marcação de falha esperada.
 
-Um teste é uma variante executável; os 69 testes não representam 69 critérios. Cada linha aponta para os resultados/erros e artefatos preservados. O código do cenário contém as verificações esperadas.
+Um teste é uma variante executável; os 69 testes não representam 69 critérios. Cada linha aponta para os resultados/erros e artefatos preservados. Nos campos `evidencias[].arquivo` dos JSONs, os caminhos são relativos à raiz `evidencias/rodada-final/`, não ao próprio arquivo `resultado.json`. O código do cenário contém as verificações esperadas.
 
 | Execução | Cenário e variante | Camada | Resultado | Bug | Evidência |
 | --- | --- | --- | --- | --- | --- |

@@ -17,7 +17,7 @@ O conjunto de títulos e estados de todos os testes foi comparado ao da rodada f
 
 ## Revisão dos artefatos
 
-Resultados por variante e anexos selecionados preservados no Git, incluindo respostas de cálculo/pedido, screenshots de sucesso/falha e snapshots da exploração. Links Markdown locais e caminhos de anexos foram conferidos; `git diff --check` sem erros. Testes foram revisados junto às regras e aos resultados; não houve revisão independente por outra pessoa ou agente.
+Resultados por variante e anexos selecionados preservados no Git, incluindo respostas de cálculo/pedido, screenshots de sucesso/falha e snapshots da exploração. Links Markdown locais e caminhos de anexos foram conferidos; `git diff --check` sem erros. Testes foram revisados junto às regras e aos resultados; na primeira rodada não houve revisão independente. Em 21/10, dois subagentes fizeram a [revisão independente](revisoes/README.md), incluindo nova execução da suíte com os mesmos 61/8. Continua não havendo revisão humana independente.
 
 Dados de cliente são sintéticos. O conteúdo do projeto foi conferido antes da publicação; arquivos de ambiente e artefatos temporários não entram nos commits. `.gitignore` e `docs/uso-de-ia.md` já existiam no histórico anterior: por orientação da pessoa candidata, suas alterações locais não são commitadas (`skip-worktree`). Isso não remove as versões antigas do histórico.
 

@@ -31,9 +31,9 @@ Criar uma linha por cenário, camada e variante, usando IDs como EX-001. Estados
 
 Para cada sessão registrar início/fim, ambiente, dados, sequência real de ações, observações, evidências e bugs. Transformar descobertas relevantes em cenários reproduzíveis. Não incluir carga, estresse ou segurança.
 
-## Resumo final (a preencher)
+## Resumo final
 
-Total por estado, critérios cobertos, bugs por severidade, testes automatizados executados, limitações e recomendação de aprovação/não aprovação com justificativa. Separar execuções de cenários únicos na contagem.
+[Rodada consolidada](rodada-final.md): 69 testes, 61 passaram e oito falharam por dois bugs. [Relatório final](relatorio-final.md) contém a recomendação e os limites; [checklist](checklist-entrega.md) confronta os seis itens do PDF. Os registros seguintes são históricos.
 
 ## Resultado do primeiro slice
 
