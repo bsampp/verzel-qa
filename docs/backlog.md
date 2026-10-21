@@ -24,7 +24,7 @@ Aplicamos a ideia de slices verificáveis da skill `to-tickets` de Matt Pocock: 
 | Transições | CA05/08; CT05/10 | #3, #4, #5 | Remoção/reaplicação passaram; CT10 falhou no estado de R$ 200 e recuperou valores ao voltar para uma unidade |
 | Quantidade e centavos | CA10/11; CT11/12/13 | #2, #3, #4, #5 | UI respeita cinco; API aceita seis (BUG-002); valores de centavos conferem |
 | Checkout e contratos | CT14/15/16/17 | #3, #4, #5 | Executados; checkout confirma valor incorreto do BUG-001; validações e contratos auxiliares passaram |
-| Exploração e entrega | EXP01/02 e checklist | #3, #4, #6 | Exploração assistida, relatório, guia e clone limpo concluídos; publicação pública e envio pendentes |
+| Exploração e entrega | EXP01/02 e checklist | #3, #4, #6 | Exploração assistida, relatório, guia e clone limpo concluídos; repositório público; envio pendente |
 
 Cupons, transições e quantidade podem ser trabalhados independentemente; checkout usa o preparo do carrinho. Um slice pode terminar com um bug aberto, desde que sua execução, impacto e limitações estejam registrados. As issues de QA não são as issues de correção do produto.
 
@@ -32,7 +32,7 @@ Cupons, transições e quantidade podem ser trabalhados independentemente; check
 
 69 testes na rodada completa: 61 passaram, oito falharam por dois bugs. [Rodada final](rodada-final.md), [exploração](exploracao.md) e [relatório](relatorio-final.md). Todos os CT01–CT20 possuem variantes executadas. Defeitos abertos: [#7](https://github.com/bsampp/verzel-qa/issues/7) e [#8](https://github.com/bsampp/verzel-qa/issues/8).
 
-As tarefas #1 a #5 tiveram os entregáveis concluídos. A pessoa candidata confirmou recebimento em 15/10/2026 e último dia de envio em 20/10/2026, sem informar horário limite. #6 mantém publicação pública, revisão humana e envio. A data do prazo foi informada pela pessoa candidata, não inferida dos commits.
+As tarefas #1 a #5 tiveram os entregáveis concluídos. A pessoa candidata confirmou recebimento em 15/10/2026 e último dia de envio em 20/10/2026, sem informar horário limite. #6 mantém revisão humana e envio; repositório público confirmado em21/10. A data do prazo foi informada pela pessoa candidata, não inferida dos commits.
 
 ## Revisão complementar de 21/10
 

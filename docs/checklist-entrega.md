@@ -23,7 +23,7 @@ Não estão incluídos testes de carga, estresse ou segurança, que o enunciado 
 
 ## Regras administrativas de envio
 
-- Repositório ainda privado: o PDF exige visibilidade pública antes do envio; mudança de visibilidade não foi autorizada.
+- Repositório público desde 21/10/2026, por autorização da pessoa candidata. Visibilidade PUBLIC e acesso HTTP 200 sem autenticação conferidos.
 - Formulário ainda não enviado. Informar uso de IA no formulário, sem apresentar ações do agente como trabalho manual humano.
 - Recebimento informado: 15/10/2026; último dia informado pela pessoa candidata: 20/10/2026. Esta revisão complementar ocorre em 21/10/2026; não afirmar que o envio foi feito no prazo.
 - Não há deploy a entregar.

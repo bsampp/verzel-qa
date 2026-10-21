@@ -23,7 +23,7 @@ Dados de cliente são sintéticos. O conteúdo do projeto foi conferido antes da
 
 ## Pendências administrativas
 
-- Repositório ainda privado; o PDF exige que seja público antes do envio.
+- Repositório tornado público em 21/10/2026 por autorização explícita. GitHub confirmou PUBLIC e a página respondeu HTTP 200 sem autenticação.
 - Prazo confirmado pela pessoa candidata: PDF recebido em 15/10/2026; último dia de envio em 20/10/2026. Horário limite não informado.
 - Revisão humana e envio pelo formulário: https://elitedev.verzel.com.br/.
 - Informar no formulário o uso de IA. O registro de apoio atualizado permanece local.
